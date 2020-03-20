@@ -2,6 +2,7 @@ export class GameState {
 
     country: Country;
     infectionState: InfectionState;
+    day: number;
 
 }
 
