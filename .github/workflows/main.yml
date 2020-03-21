@@ -30,6 +30,7 @@ jobs:
     - name: Ionic Preparation
       run: |
         npm install -g @ionic/cli
+        npx npm-force-resolutions
         npm install
 
     - name: Ionic Build
