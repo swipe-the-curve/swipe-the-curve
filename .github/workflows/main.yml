@@ -25,12 +25,9 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: '12.x'
-    
-    - name: Ionic Setup
-      run: |
-        npm install -G @ionic/cli
 
     # Runs a set of commands using the runners shell
     - name: Ionic Build
       run: |
+        npm install -G @ionic/cli
         $(npm config get prefix)/bin/ionic build
