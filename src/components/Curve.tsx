@@ -1,6 +1,8 @@
 import { } from '@ionic/react';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ResponsiveContainer, AreaChart, Area, Tooltip, } from 'recharts';
+import { game } from '../core';
+import { EpidemicState } from '../core/epidemicmodel';
 
 const data = [
   {
@@ -26,12 +28,38 @@ const data = [
   },
 ];
 
+const mapStates = (epidemicStates: EpidemicState[]) => {
+  const mappedEpidemicState = epidemicStates.map(epidemicState => {
+    const entry = {
+      uv: epidemicState.infected,
+      pv: epidemicState.recovered,
+      amt: epidemicState.dead,
+    };
+
+
+    return entry;
+  })
+  return mappedEpidemicState;
+}
+
 const Curve: React.FC = () => {
+  const [epidemicState, setEpidemicState] = useState(mapStates(game.epidemicStates));
+
+  useEffect(() => {
+    console.log("addEventlistener");
+    game.addStateListener(() => {
+      const mappedEpidemicState = mapStates(game.epidemicStates);
+      setEpidemicState(mappedEpidemicState);
+    });
+  }, [])
+
+  console.log("EpidState: ", epidemicState);
+
   return (
     <div className="full-width">
         <ResponsiveContainer height='100%' width='100%'>
           <AreaChart
-            data={data}
+            data={epidemicState}
             margin={{
               left: -2,
             }}

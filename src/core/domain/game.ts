@@ -45,6 +45,12 @@ export class Game {
         this.notifyListeners();
     }
 
+    public dummy() {
+        this.gameState.economy -= 0.1;
+        this.epidemicStates.push(new EpidemicState(1, 2, 3));
+        this.notifyListeners();
+    }
+
     public get daysPassed(): number {
         return this.epidemicStates.length
     }

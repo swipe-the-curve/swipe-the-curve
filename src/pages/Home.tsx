@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonGrid, IonRow, IonCol } from '@ionic/react';
+import React, { useState, useEffect } from 'react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonGrid, IonRow, IonCol, IonButton } from '@ionic/react';
 import Curve from '../components/Curve';
 import './Home.css';
 import CardsComponent from '../components/CardsComponent';
@@ -21,11 +21,14 @@ const Home: React.FC = () => {
   const [feelLevel, setFeelLevel] = useState(1);
   const [wealthLevel, setWealthLevel] = useState(1);
 
-  game.addStateListener(() => {
-    setHeartLevel(1); // TODO What is this?
-    setFeelLevel(game.gameState.populationMood);
-    setWealthLevel(game.gameState.economy);
-  });
+  useEffect(() => {
+    console.log("addEventlistener");
+    game.addStateListener(() => {
+      setHeartLevel(1); // TODO What is this?
+      setFeelLevel(game.gameState.populationMood);
+      setWealthLevel(game.gameState.economy);
+    });
+  }, [])
 
   return (
     <IonPage>
@@ -89,10 +92,17 @@ const Home: React.FC = () => {
           <IonRow className="cardstack-container">
             <IonCol><CardsComponent cards={cards} /></IonCol>
           </IonRow>
+          <IonRow>
+            <IonButton onClick={() => test()}>TestButton</IonButton>
+          </IonRow>
         </IonGrid>
       </IonContent>
     </IonPage>
   );
 };
+
+const test = () => {
+  game.dummy();
+}
 
 export default Home;
