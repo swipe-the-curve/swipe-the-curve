@@ -16,6 +16,12 @@ export class Game {
     }
 
     public step(effect: ChoiceEffect) {
+        this.gameState.populationMood += effect.populationMood
+        this.gameState.economy += effect.economy
+        this.gameState.infectionState.healthcareSystemCapacity += effect.healthSystemCapacity
+        this.gameState.infectionState.rateOfQuarantining += effect.rateOfQuarantining
+        // TODO rare of suspectability
+
         var newEpidemicState = this.model.step(this.gameState.infectionState.rateOfInfection,
             this.gameState.infectionState.rateOfRecovery,
             this.gameState.infectionState.rateOfDeath,
@@ -36,7 +42,7 @@ export class GameState {
 
     constructor(
         public readonly infectionState: InfectionState,
-        public readonly: Country        
+        public readonly country: Country        
     ) {
     }
 
