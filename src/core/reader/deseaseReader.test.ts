@@ -6,10 +6,11 @@ test("parse event card from json string", () => {
         {
             "name": "COVID-19",
             "rateOfInfection": 6,
-            "rateOfDeath": 0.015
+            "rateOfDeath": 0.015,
+            "rateOfImmunity": 0
         }
     ]`;
     const diseases = new DiseaseReader().fromJson(json);
-    const expectedDisease = new Disease("COVID-19", 6, 0.015);
+    const expectedDisease = new Disease("COVID-19", 6, 0.015, 0);
     expect(diseases).toEqual([expectedDisease]);
 });
