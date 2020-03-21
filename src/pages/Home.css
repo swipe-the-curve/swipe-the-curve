@@ -1,6 +1,6 @@
 ion-content {
   --background: none;
-  background-image: url('../img/carte.png');
+  background-image: url('../img/carte_light.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -30,12 +30,14 @@ ion-grid {
 }
 
 .curve-container{
-  color: red;
   border: solid 1px grey;
   height: 20vh;
+  background-color: #6B6357;
 }
 
-.cardstack-container{
+.cardstack-container {
   border: solid 1px grey;
   height: 60vh;
+  background-color: #6B6357;
+  opacity: 0.7;
 }
