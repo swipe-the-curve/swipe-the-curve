@@ -31,8 +31,13 @@ jobs:
       run: |
         npm install -g @ionic/cli
         npx npm-force-resolutions
-        npm install
 
     - name: Ionic Build
       run: |
+        npm install
         ionic build
+    
+    - uses: actions/upload-artifact@v1
+      with:
+        name: swipe-the-curve-web
+        path: build/
