@@ -49,3 +49,5 @@ jobs:
           FOLDER: swipe-the-curve-web/build # The folder the action should deploy.
           TARGET_FOLDER: master
           DEBUG: true
+          GIT_CONFIG_NAME: Dr. Corona
+          GIT_CONFIG_EMAIL: dr.corona@the-imperfection.de
