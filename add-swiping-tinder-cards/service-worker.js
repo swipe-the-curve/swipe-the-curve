@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "https://swipe-the-curve.github.io/swipe-the-curve/add-swiping-tinder-cards/precache-manifest.7c4d4b842920fbbedf9cf66acd08843b.js"
+  "https://swipe-the-curve.github.io/swipe-the-curve/add-swiping-tinder-cards/precache-manifest.0ab0f616af5c0ae1a257d2a6ffb9bad1.js"
 );
 
 self.addEventListener('message', (event) => {
