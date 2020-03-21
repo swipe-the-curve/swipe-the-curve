@@ -27,6 +27,11 @@ jobs:
         export PUBLIC_URL=https://swipe-the-curve.github.io/swipe-the-curve/${GITHUB_REF##*/}/
         npm install
         ionic build
+        npm test
+
+    - name: Test
+      run: npm test
+
     
     - uses: actions/upload-artifact@v1
       with:
