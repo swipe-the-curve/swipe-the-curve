@@ -48,3 +48,4 @@ jobs:
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: swipe-the-curve-web/build # The folder the action should deploy.
           TARGET_FOLDER: master
+          DEBUG: true
