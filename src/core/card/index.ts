@@ -42,13 +42,13 @@ export class Choice {
 export class ChoiceEffect {
 
     constructor(
-        public populationMoodEffect: number,
-        public economyEffect: number,
+        public populationMood: number,
+        public economy: number,
 
-        public rateOfSusceptibilityEffect: number,
-        public rateOfQuarantiningEffect: number,
+        public rateOfSusceptibility: number,
+        public rateOfQuarantining: number,
 
-        public healthSystemCapacityEffect: number,
+        public healthSystemCapacity: number,
 
         // TODO Additional factors (e.g death rate)
     ) { }
