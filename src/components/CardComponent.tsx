@@ -7,11 +7,7 @@ interface CardProps {
 }
 const CardComponent: React.FunctionComponent<CardProps> = (props) => {
     return (<div className="card">
-        <IonCard>
-            <IonCardContent>
-                <IonCardContent>{props.card.text}</IonCardContent>
-            </IonCardContent>
-        </IonCard>
+        {props.card.text}
     </div>
     );
 };
