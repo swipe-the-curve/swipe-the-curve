@@ -1,0 +1,31 @@
+[
+  {
+    "type": "Selection",
+    "text": "Selection Card Text",
+    "leftChoice": {
+      "text": "No",
+      "effect": {
+        "populationMood": -0.5,
+        "healthSystemCapacity": 0.1,
+        "rateOfSusceptibility": -0.3
+      }
+    },
+    "rightChoice": {
+      "text": "Yes",
+      "effect": {
+        "populationMood": 0.2,
+        "rateOfSusceptibility": 0.1
+      }
+    }
+  },
+  {
+    "type": "Event",
+    "text": "Event Card Text",
+    "choice": {
+      "text": "What...",
+      "effect": {
+        "economy": -1
+      }
+    }
+  }
+]
