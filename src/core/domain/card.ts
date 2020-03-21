@@ -45,9 +45,7 @@ export class ChoiceEffect {
         public populationMood: number,
         public economy: number,
 
-        public rateOfSusceptibility: number,
         public rateOfQuarantining: number,
-
         public healthSystemCapacity: number,
 
         // TODO Additional factors (e.g death rate)

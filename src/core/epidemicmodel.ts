@@ -10,7 +10,8 @@ export class EpidemicModel {
 
     }
 
-    public step(rateOfInfection: number, rateOfRecovery: number, rateOfDeath: number, rateOfImmunity: number) {
+    public step(rateOfInfection: number, rateOfDeath: number, rateOfImmunity: number) {
+        const rateOfRecovery = 1 - rateOfDeath;
         var newImmune = Math.floor(Math.min(Math.max(rateOfImmunity * this.susceptibles, 0), this.susceptibles))
         var newInfected = Math.floor(Math.min(Math.max(rateOfInfection * this.susceptibles * this.infected, 0), this.susceptibles))
         var newRecovered = Math.floor(Math.min(Math.max(rateOfRecovery * this.infected, 0), this.infected))

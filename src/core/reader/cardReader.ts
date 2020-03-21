@@ -27,7 +27,6 @@ export default class CardReader extends JsonArrayReader<Card> {
         const effect = new ChoiceEffect(
             effectData.populationMood || 0,
             effectData.economy || 0,
-            effectData.rateOfSusceptibility || 0,
             effectData.rateOfQuarantining || 0,
             effectData.healthSystemCapacity || 0
         );
@@ -41,9 +40,7 @@ interface EffectData {
     populationMood?: number,
     economy?: number,
 
-    rateOfSusceptibility?: number,
     rateOfQuarantining?: number,
-
     healthSystemCapacity?: number,
 
 }

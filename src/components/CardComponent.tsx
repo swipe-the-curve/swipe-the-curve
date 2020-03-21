@@ -1,5 +1,5 @@
 import React from 'react';
-import { IonCard, IonCardContent, IonCardTitle, IonItem, IonIcon, IonLabel } from '@ionic/react';
+import { IonCard, IonCardContent } from '@ionic/react';
 import { SelectionCard } from '../core/domain/card';
 
 interface CardProps {

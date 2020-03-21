@@ -1,30 +1,46 @@
 [
   {
     "type": "Selection",
-    "text": "Selection Card Text",
+    "text": "Auf der anderen Seite der Welt ist eine bisher unbekannte Krankheit aufgetreten, die sich ungewöhnlich schnell verbreitet.",
     "leftChoice": {
-      "text": "No",
+      "text": "Informationen unter Verschluss halten",
       "effect": {
-        "populationMood": -0.5,
-        "healthSystemCapacity": 0.1,
-        "rateOfSusceptibility": -0.3
+        "rateOfQuarantining": -0.01
       }
     },
     "rightChoice": {
-      "text": "Yes",
+      "text": "Bevölkerung informieren",
       "effect": {
-        "populationMood": 0.2,
-        "rateOfSusceptibility": 0.1
+        "populationMood": -0.01,
+        "economy": -0.01
       }
     }
   },
   {
     "type": "Event",
-    "text": "Event Card Text",
+    "text": "Der erste Fall von Corona ist in Deutschland aufgetreten.",
     "choice": {
-      "text": "What...",
+      "text": "Und?",
       "effect": {
-        "economy": -1
+        "rateOfQuarantining": -0.01
+      }
+    }
+  },
+  {
+    "type": "Selection",
+    "text": "Du hast an die Bevölkerung appelliert, damit sie zu hause bleibt. Leider sind noch einige Menschen in Gruppen untewegs.",
+    "leftChoice": {
+      "text": "Eine Ausgangssperre aussprechen",
+      "effect": {
+        "populationMood": -0.5,
+        "rateOfQuarantining": 0.15
+      }
+    },
+    "rightChoice": {
+      "text": "Weiter appellieren",
+      "effect": {
+        "populationMood": 0.01,
+        "rateOfQuarantining": -0.1
       }
     }
   }
