@@ -28,8 +28,8 @@ jobs:
         npm install
         ionic build
 
-    # - name: Test
-    #   run: npm test TODO FIND OUT HOW TO MAKE THIS NON INTERACTIVE
+    - name: Test
+      run: npm test -- --watchAll=false
 
     
     - uses: actions/upload-artifact@v1
