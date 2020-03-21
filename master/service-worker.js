@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "https://swipe-the-curve.github.io/swipe-the-curve/master/precache-manifest.e0be1f65e8987402556b06b70244c5a9.js"
+  "https://swipe-the-curve.github.io/swipe-the-curve/master/precache-manifest.1353c358382ad55a69609ee53f7a25ed.js"
 );
 
 self.addEventListener('message', (event) => {
