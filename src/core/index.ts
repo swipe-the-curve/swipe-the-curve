@@ -1,25 +1,37 @@
 export class GameState {
 
-    country: Country;
-    infectionState: InfectionState;
     day: number;
+
+    constructor(
+        public country: Country,
+        public infectionState: InfectionState
+    ) {
+        this.day = 0
+    }
 
 }
 
 
 export class InfectionState {
 
-    disease: Disease;
-
-    rateOfSusceptibility: number;
-    rateOfQuarantining: number;
 
     infectedPopulation: number;
     deceasedPopulation: number;
 
     populationMood: number;
     economy: number;
-    healthSystemCapacity: number;
+
+    constructor(
+        public disease: Disease,
+        public rateOfSusceptibility: number,
+        public rateOfQuarantining: number,
+        public healthSystemCapacity: number
+    ) {
+        this.infectedPopulation = 0;
+        this.deceasedPopulation = 0;
+        this.populationMood = 1;
+        this.economy = 1;
+    }
 
     public get rateOfDeath(): number {
         // TODO Additional factors 
@@ -35,18 +47,20 @@ export class InfectionState {
 
 export class Disease {
 
-    name: string;
-
-    rateOfInfection: number;
-    rateOfDeath: number;
+    constructor(
+        public name: string,
+        public rateOfInfection: number,
+        public rateOfDeath: number
+    ) { }
 
 }
 
 
 export class Country {
 
-    name: string;
-
-    totalPopulation: number;
+    constructor(
+        public name: string,
+        public totalPopulation: number
+    ) { }
 
 }

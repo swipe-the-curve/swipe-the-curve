@@ -32,21 +32,25 @@ export class EventCard extends SelectionCard {
 
 export class Choice {
 
-    text: string;
-    effect: ChoiceEffect;
+    constructor(
+        public text: string,
+        public effect: ChoiceEffect
+    ) { }
 
 }
 
 export class ChoiceEffect {
 
-    populationMoodEffect: number;
-    economyEffect: number;
+    constructor(
+        public populationMoodEffect: number,
+        public economyEffect: number,
 
-    rateOfSusceptibilityEffect: number;
-    rateOfQuarantiningEffect: number;
+        public rateOfSusceptibilityEffect: number,
+        public rateOfQuarantiningEffect: number,
 
-    healthSystemCapacityEffect: number;
+        public healthSystemCapacityEffect: number,
 
-    // TODO Additional factors (e.g death rate)
+        // TODO Additional factors (e.g death rate)
+    ) { }
 
 }
