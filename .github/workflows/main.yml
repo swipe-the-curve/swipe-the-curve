@@ -30,6 +30,5 @@ jobs:
     - name: Ionic Build
       run: |
         npm install -g @ionic/cli
-        NPM_PREFIX=$(npm config get prefix)
-        ls -ahl $NPM_PREFIX/bin
-        $NPM_PREFIX/bin/ionic build
+        npm install
+        ionic build
