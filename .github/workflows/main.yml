@@ -45,7 +45,7 @@ jobs:
     
     - name: Print folder structure (DEBUG)
       run: |
-        ls -ahl
+        ls -ahl swipe-the-curve-web
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
