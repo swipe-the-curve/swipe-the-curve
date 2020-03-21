@@ -1,10 +1,14 @@
-ion-content ion-toolbar {
-  --background: translucent;
+ion-content {
+  --background: none;
+ 
+  background-image: url('../img/carte.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 ion-grid {
   text-align: center;
-  width: 65%;
+  width: 60%;
 }
 
 .iconheart{
