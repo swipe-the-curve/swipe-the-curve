@@ -13,8 +13,8 @@
     "static/js/5.be8df34e.chunk.js": "https://swipe-the-curve.github.io/swipe-the-curve/iconsFilled/static/js/5.be8df34e.chunk.js",
     "static/js/5.be8df34e.chunk.js.map": "https://swipe-the-curve.github.io/swipe-the-curve/iconsFilled/static/js/5.be8df34e.chunk.js.map",
     "main.css": "https://swipe-the-curve.github.io/swipe-the-curve/iconsFilled/static/css/main.d9010cce.chunk.css",
-    "main.js": "https://swipe-the-curve.github.io/swipe-the-curve/iconsFilled/static/js/main.381c9c47.chunk.js",
-    "main.js.map": "https://swipe-the-curve.github.io/swipe-the-curve/iconsFilled/static/js/main.381c9c47.chunk.js.map",
+    "main.js": "https://swipe-the-curve.github.io/swipe-the-curve/iconsFilled/static/js/main.d369c7d9.chunk.js",
+    "main.js.map": "https://swipe-the-curve.github.io/swipe-the-curve/iconsFilled/static/js/main.d369c7d9.chunk.js.map",
     "runtime-main.js": "https://swipe-the-curve.github.io/swipe-the-curve/iconsFilled/static/js/runtime-main.e5d298ce.js",
     "runtime-main.js.map": "https://swipe-the-curve.github.io/swipe-the-curve/iconsFilled/static/js/runtime-main.e5d298ce.js.map",
     "static/css/8.1594e46e.chunk.css": "https://swipe-the-curve.github.io/swipe-the-curve/iconsFilled/static/css/8.1594e46e.chunk.css",
@@ -193,7 +193,7 @@
     "static/js/94.6643fbd9.chunk.js": "https://swipe-the-curve.github.io/swipe-the-curve/iconsFilled/static/js/94.6643fbd9.chunk.js",
     "static/js/94.6643fbd9.chunk.js.map": "https://swipe-the-curve.github.io/swipe-the-curve/iconsFilled/static/js/94.6643fbd9.chunk.js.map",
     "index.html": "https://swipe-the-curve.github.io/swipe-the-curve/iconsFilled/index.html",
-    "precache-manifest.e05b4086412cde16ffcdc10dde4295cf.js": "https://swipe-the-curve.github.io/swipe-the-curve/iconsFilled/precache-manifest.e05b4086412cde16ffcdc10dde4295cf.js",
+    "precache-manifest.800545315c1836dece2d8b9d74252130.js": "https://swipe-the-curve.github.io/swipe-the-curve/iconsFilled/precache-manifest.800545315c1836dece2d8b9d74252130.js",
     "service-worker.js": "https://swipe-the-curve.github.io/swipe-the-curve/iconsFilled/service-worker.js",
     "static/css/8.1594e46e.chunk.css.map": "https://swipe-the-curve.github.io/swipe-the-curve/iconsFilled/static/css/8.1594e46e.chunk.css.map",
     "static/css/main.d9010cce.chunk.css.map": "https://swipe-the-curve.github.io/swipe-the-curve/iconsFilled/static/css/main.d9010cce.chunk.css.map",
@@ -208,6 +208,6 @@
     "static/css/8.1594e46e.chunk.css",
     "static/js/8.5461d97d.chunk.js",
     "static/css/main.d9010cce.chunk.css",
-    "static/js/main.381c9c47.chunk.js"
+    "static/js/main.d369c7d9.chunk.js"
   ]
 }
