@@ -5,15 +5,14 @@ import { ChoiceEffect } from "./card";
 export class Game {
 
     epidemicStates: EpidemicState[] = []
-    readonly model = new EpidemicModel(0)
+    readonly model : EpidemicModel
     readonly gameState : GameState
 
-
-    constructor(
-        
-    ) {
+    constructor() {
         var disease = new Disease("Corona", 2.3, 0.005, 0)
-        this.gameState = new GameState(new InfectionState(disease, 0.0004), new Country("SCHLAND", 80000000))
+        var country = new Country("SCHLAND", 80000000)
+        this.gameState = new GameState(new InfectionState(disease, 0.0004), country)
+        this.model = new EpidemicModel(0, country.population)
     }
 
     public step(effect: ChoiceEffect) {
@@ -37,8 +36,7 @@ export class GameState {
 
     constructor(
         public readonly infectionState: InfectionState,
-        public readonly: Country
-        
+        public readonly: Country        
     ) {
     }
 
@@ -50,7 +48,7 @@ export class InfectionState {
 
     constructor(
         public disease: Disease,
-        public healthSystemCapacity: number
+        public healthcareSystemCapacity: number
     ) {
     }
 
