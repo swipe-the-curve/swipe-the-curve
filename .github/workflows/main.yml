@@ -23,9 +23,8 @@ jobs:
         npx npm-force-resolutions
 
     - name: Ionic Build 🔧
-      env:
-        PUBLIC_URL: https://swipe-the-curve.github.io/swipe-the-curve/${GITHUB_REF##*/}/
       run: |
+        export PUBLIC_URL=https://swipe-the-curve.github.io/swipe-the-curve/${GITHUB_REF##*/}/
         npm install
         ionic build
     
@@ -51,6 +50,7 @@ jobs:
     - name: Print folder structure (DEBUG)
       run: |
         ls -ahl swipe-the-curve-web
+        export TARGET_FOLDER=${GITHUB_REF##*/}
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
@@ -58,7 +58,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
         FOLDER: swipe-the-curve-web/
-        TARGET_FOLDER: ${GITHUB_REF##*/}
         DEBUG: true
         GIT_CONFIG_NAME: Dr. Corona
         GIT_CONFIG_EMAIL: dr.corona@the-imperfection.de
