@@ -2,7 +2,8 @@ name: CI
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - '**'
 
 jobs:
   build-web:
@@ -23,7 +24,7 @@ jobs:
 
     - name: Ionic Build 🔧
       env:
-        PUBLIC_URL: https://swipe-the-curve.github.io/swipe-the-curve/master/
+        PUBLIC_URL: https://swipe-the-curve.github.io/swipe-the-curve/${GITHUB_REF##*/}/
       run: |
         npm install
         ionic build
@@ -57,7 +58,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
         FOLDER: swipe-the-curve-web/
-        TARGET_FOLDER: master
+        TARGET_FOLDER: ${GITHUB_REF##*/}
         DEBUG: true
         GIT_CONFIG_NAME: Dr. Corona
         GIT_CONFIG_EMAIL: dr.corona@the-imperfection.de
