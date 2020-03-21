@@ -8,10 +8,11 @@ import { Card, EventCard, Choice, ChoiceEffect, SelectionCard } from '../core/do
 
 const Home: React.FC = () => {
 
-  var cards: Array<Card> = [
-    new EventCard("test", new Choice("Test", new ChoiceEffect(0, 0, 0, 0, 0))),
-    new SelectionCard("test2", new Choice("bad Choice", new ChoiceEffect(0, 0, 0, 0, 0)), new Choice("gud Choice", new ChoiceEffect(0, 0, 0, 0, 0))),
-    new SelectionCard("test2", new Choice("bad Choice", new ChoiceEffect(0, 0, 0, 0, 0)), new Choice("gud Choice", new ChoiceEffect(0, 0, 0, 0, 0)))
+  var cards: Array<SelectionCard> = [
+    new SelectionCard("Deutsche Touristen sind überall auf der Welt verstreut und können wegen geschlossener Grenzen nicht mehr regulär zurück reisen. Möchtest du die Bevölkerung zurück gfliefen ", new Choice("bad Choice", new ChoiceEffect(0, 0, 0, 0, 0)), new Choice("gud Choice", new ChoiceEffect(0, 0, 0, 0, 0))),
+    new SelectionCard("Auf der anderen Seite der Welt ist eine bisher unbekannte Krankheit aufgetreten, die sich ungewöhnlich schnell verbreitet. Möchtest du die Bevölkerung informieren?"
+      , new Choice("bad Choice", new ChoiceEffect(0, 0, 0, 0, 0)), new Choice("gud Choice", new ChoiceEffect(0, 0, 0, 0, 0))),
+    new EventCard("test", new Choice("Test", new ChoiceEffect(0, 0, 0, 0, 0)))
   ];
 
   return (

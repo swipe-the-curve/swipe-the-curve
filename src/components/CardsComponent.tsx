@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Card, EventCard, SelectionCard } from '../core/domain/card';
+import { SelectionCard } from '../core/domain/card';
 import { Swipeable, direction } from 'react-deck-swiper';
 import CardComponent from './CardComponent';
 
+
 interface CardsProps {
-    cards: Array<Card>
+    cards: Array<SelectionCard>
 }
 const CardsComponent: React.FunctionComponent<CardsProps> = (props) => {
 
@@ -27,11 +28,13 @@ const CardsComponent: React.FunctionComponent<CardsProps> = (props) => {
     }
 
     return (
-        <Swipeable onSwipe={handleOnSwipe}>
-            <div className="card">
-                <CardComponent card={props.cards[count]} />
-            </div>
-        </Swipeable>
+        <div>
+            <Swipeable onSwipe={handleOnSwipe}>
+                <div className="card">
+                    <CardComponent card={props.cards[count]} />
+                </div>
+            </Swipeable>
+        </div>
     );
 };
 

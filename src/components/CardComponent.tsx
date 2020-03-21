@@ -1,15 +1,15 @@
 import React from 'react';
-import { IonCard, IonCardContent } from '@ionic/react';
-import { Card, EventCard, Choice, ChoiceEffect } from '../core/domain/card';
+import { IonCard, IonCardContent, IonCardTitle, IonItem, IonIcon, IonLabel } from '@ionic/react';
+import { SelectionCard } from '../core/domain/card';
 
 interface CardProps {
-    card: Card
+    card: SelectionCard
 }
-const CardComponent: React.FunctionComponent<CardProps> =(props) => {
+const CardComponent: React.FunctionComponent<CardProps> = (props) => {
     return (<div className="card">
         <IonCard>
             <IonCardContent>
-                {props.card.text}
+                <IonCardContent>{props.card.text}</IonCardContent>
             </IonCardContent>
         </IonCard>
     </div>
