@@ -21,7 +21,7 @@ jobs:
         npm install -g @ionic/cli
         npx npm-force-resolutions
 
-    - name: Ionic Build
+    - name: Ionic Build 🔧
       run: |
         npm install
         ionic build
@@ -37,11 +37,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    
+
     - name: Download build artifact
       uses: actions/download-artifact@v1
       with:
         name: swipe-the-curve-web
+    
+    - name: Print folder structure (DEBUG)
+      run: |
+        ls -ahl
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
