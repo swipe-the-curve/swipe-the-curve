@@ -28,8 +28,8 @@ const Home: React.FC = () => {
           <IonRow className="curve-container">
             <Curve />
           </IonRow>
-          <IonRow className="cartstack-container">
-            <IonCol>Cartstack</IonCol>
+          <IonRow className="cardstack-container">
+            <IonCol>Cardstack</IonCol>
           </IonRow>
         </IonGrid>
       </IonContent>
