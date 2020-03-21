@@ -30,7 +30,7 @@ const CardsComponent: React.FunctionComponent<CardsProps> = (props) => {
     return (
         <div>
             <Swipeable onSwipe={handleOnSwipe}>
-                <div className="card">
+                <div className="">
                     <CardComponent card={props.cards[count]} />
                 </div>
             </Swipeable>

@@ -1,38 +1,63 @@
+
+
+ion-content {
+  --background: url('../components/images/bg.png') -40px -20px/auto 104% no-repeat;
+}
+
 ion-content ion-toolbar {
   --background: translucent;
 }
 
 ion-grid {
   text-align: center;
-  width: 65%;
-}
-
-.iconheart{
-  color: red; 
-}
-
-.iconpeople{
-  color: midnightblue; 
-}
-
-.iconcash{
-  color: darkgreen; 
+  max-width: 560px;
 }
 
 .resource-container{
-  border: solid 1px grey;
-  height: 8vh;
+  background-color: #4B4237;
+  border-radius: 12px;
+  height: 7vh;
   vertical-align: middle;
   font-size: 5vh;
+  margin-top: -28vh;
 }
 
-.curve-container{
-  color: red;
-  border: solid 1px grey;
-  height: 20vh;
+.curve-container {
+  background-color: #6b6357;
+  border-radius: 12px;
+  height: 25vh;
+  width: 100%;
+  margin-top: 6vh;
+  padding-top: 20%;
+  overflow: hidden;
 }
 
 .cardstack-container{
-  border: solid 1px grey;
-  height: 60vh;
+  background-color: #6b6357;
+  border-radius: 12px;
+  height: 32vh;
+  margin-top: 24vh;
+}
+
+.card {
+  background-color: #EDE7D9;
+  border-radius: 12px;
+  height: 29vh;
+  margin: 16px;
+  padding: 8px;
+  color: black;
+  font-size: 2em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.border {
+  border: solid 1px blue;
+}
+
+.full-width {
+  width: 100%;
+  z-index: -1px;
 }
