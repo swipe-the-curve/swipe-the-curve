@@ -22,6 +22,8 @@ jobs:
         npx npm-force-resolutions
 
     - name: Ionic Build 🔧
+      env:
+        PUBLIC_URL: https://swipe-the-curve.github.io/swipe-the-curve/master/
       run: |
         npm install
         ionic build
