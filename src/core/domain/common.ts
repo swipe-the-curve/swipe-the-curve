@@ -3,7 +3,8 @@ export class Disease {
     constructor(
         public name: string,
         public rateOfInfection: number,
-        public rateOfDeath: number
+        public rateOfDeath: number,
+        public rateOfImmunity: number
     ) { }
 
 }
