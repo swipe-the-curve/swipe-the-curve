@@ -1,3 +1,38 @@
 ion-content ion-toolbar {
   --background: translucent;
 }
+
+ion-grid {
+  text-align: center;
+  width: 65%;
+}
+
+.iconheart{
+  color: red; 
+}
+
+.iconpeople{
+  color: midnightblue; 
+}
+
+.iconcash{
+  color: darkgreen; 
+}
+
+.resource-container{
+  border: solid 1px grey;
+  height: 8vh;
+  vertical-align: middle;
+  font-size: 5vh;
+}
+
+.curve-container{
+  color: red;
+  border: solid 1px grey;
+  height: 20vh;
+}
+
+.chartstack-container{
+  border: solid 1px grey;
+  height: 60vh;
+}
