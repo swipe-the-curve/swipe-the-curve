@@ -2,7 +2,6 @@
   "name": "swipe-the-curve",
   "version": "0.0.1",
   "private": true,
-  "homepage": "https://swipe-the-curve.github.io/swipe-the-curve/master/",
   "dependencies": {
     "@ionic/react": "^5.0.0",
     "@ionic/react-router": "^5.0.0",
