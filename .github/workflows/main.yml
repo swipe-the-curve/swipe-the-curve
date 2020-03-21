@@ -37,6 +37,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        ref: 'gh-pages'
 
     - name: Download build artifact
       uses: actions/download-artifact@v1
@@ -52,7 +54,7 @@ jobs:
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
-        FOLDER: swipe-the-curve-web/build
+        FOLDER: swipe-the-curve-web/
         TARGET_FOLDER: master
         DEBUG: true
         GIT_CONFIG_NAME: Dr. Corona
