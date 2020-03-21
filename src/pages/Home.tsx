@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonGrid, IonRow, IonCol } from '@ionic/react';
 import Curve from '../components/Curve';
 import './Home.css';
@@ -6,9 +6,9 @@ import CardsComponent from '../components/CardsComponent';
 import { EventCard, Choice, ChoiceEffect, SelectionCard } from '../core/domain/card';
 import { game } from '../core';
 
-const Home: React.FC = () => {
 
-  console.log(game.gameState.currentCard); // FIXME is undefined
+
+const Home: React.FC = () => {
 
   const cards: Array<SelectionCard> = [
     new SelectionCard("Deutsche Touristen sind überall auf der Welt verstreut und können wegen geschlossener Grenzen nicht mehr regulär zurück reisen. Möchtest du die Bevölkerung zurück gfliefen ", new Choice("bad Choice", new ChoiceEffect(0, 0, 0, 0)), new Choice("gud Choice", new ChoiceEffect(0, 0, 0, 0))),
@@ -17,9 +17,15 @@ const Home: React.FC = () => {
     new EventCard("test", new Choice("Test", new ChoiceEffect(0, 0, 0, 0)))
   ];
 
-  const heartLevel = 0.25;
-  const feelLevel = 0.5;
-  const wealthLevel = 0.7;
+  const [heartLevel, setHeartLevel] = useState(1);
+  const [feelLevel, setFeelLevel] = useState(1);
+  const [wealthLevel, setWealthLevel] = useState(1);
+
+  game.addStateListener(() => {
+    setHeartLevel(1); // TODO What is this?
+    setFeelLevel(game.gameState.populationMood);
+    setWealthLevel(game.gameState.economy);
+  });
 
   return (
     <IonPage>

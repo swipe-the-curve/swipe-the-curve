@@ -10,6 +10,8 @@ export class Game {
     readonly gameState : GameState
     cards: Card[] = []
 
+    readonly stateListeners: StateListener[];
+
     constructor() {
         var disease = new Disease("Corona", 2.3, 0.005, 0)
         var country = new Country("SCHLAND", 80000000)
@@ -18,11 +20,12 @@ export class Game {
         .then(d => {
             this.cards = new CardReader().fromObject(d).reverse();
             this.gameState.currentCard = this.nextCard();
-            console.log(this.gameState.currentCard);
+            this.notifyListeners();
         });
         this.gameState = new GameState(new InfectionState(country, disease, 0.0004), country)
         this.model = new EpidemicModel(0, country.population)
         this.epidemicStates = [new EpidemicState(0, 0, 0)]
+        this.stateListeners = []
     }
 
     public step(effect: ChoiceEffect) {
@@ -39,6 +42,7 @@ export class Game {
         this.epidemicStates.push(newEpidemicState)
 
         this.gameState.currentCard = this.nextCard();
+        this.notifyListeners();
     }
 
     public get daysPassed(): number {
@@ -47,6 +51,16 @@ export class Game {
 
     nextCard(): Card | undefined {
         return this.cards.pop();
+    }
+
+    addStateListener(listener: StateListener) {
+        this.stateListeners.push(listener);
+    }
+
+    private notifyListeners() {
+        for (const listener of this.stateListeners) {
+            listener();
+        }
     }
 
 }
@@ -94,4 +108,9 @@ export class InfectionState {
         return this.disease.rateOfImmunity
     }
 
+}
+
+
+export interface StateListener {
+    (): void;
 }
