@@ -1,5 +1,5 @@
-import CardReader from "./reader";
-import { EventCard, Choice, ChoiceEffect, SelectionCard } from ".";
+import CardReader from "./cardReader";
+import { EventCard, Choice, ChoiceEffect, SelectionCard } from "../domain/card";
 
 test("parse event card from json string", () => {
     const json = `[
@@ -14,7 +14,7 @@ test("parse event card from json string", () => {
             }
         }
     ]`;
-    const cards = CardReader.fromJson(json);
+    const cards = new CardReader().fromJson(json);
     const expectedCard = new EventCard(
         "Event Card Text",
         new Choice(
@@ -47,7 +47,7 @@ test("parse selection card from json string", () => {
             }
         }
     ]`;
-    const cards = CardReader.fromJson(json);
+    const cards = new CardReader().fromJson(json);
     const expectedCard = new SelectionCard(
         "Selection Card Text",
         new Choice(

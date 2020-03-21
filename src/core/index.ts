@@ -1,3 +1,5 @@
+import { Country, Disease } from "./domain/common";
+
 export class GameState {
 
     day: number;
@@ -10,7 +12,6 @@ export class GameState {
     }
 
 }
-
 
 export class InfectionState {
 
@@ -41,26 +42,5 @@ export class InfectionState {
     public get rateOfRecovery() : number {
         return 1 - this.rateOfDeath;
     }
-
-}
-
-
-export class Disease {
-
-    constructor(
-        public name: string,
-        public rateOfInfection: number,
-        public rateOfDeath: number
-    ) { }
-
-}
-
-
-export class Country {
-
-    constructor(
-        public name: string,
-        public totalPopulation: number
-    ) { }
 
 }

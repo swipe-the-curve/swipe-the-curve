@@ -1,22 +1,11 @@
-import { Card, SelectionCard, EventCard, Choice, ChoiceEffect } from ".";
+import { Card, SelectionCard, EventCard, Choice, ChoiceEffect } from "../domain/card";
+import {  JsonArrayReader } from ".";
 
 type CardType = "selection" | "event";
 
-export default class CardReader {
+export default class CardReader extends JsonArrayReader<Card> {
 
-    static fromJson(json: string): Card[] {
-        return this.fromObject(JSON.parse(json));
-    }
-
-    static fromObject(data: any[]): Card[] {
-        const cards: Card[] = [];
-        for (const cardData of data) {
-            cards.push(this.cardFromObject(cardData))
-        }
-        return cards;
-    }
-
-    private static cardFromObject(data: any): Card {
+    protected elementFromObject(data: any): Card {
         const cardType: CardType = data.type.toLowerCase();
         const text: string = data.text;
         switch (cardType) {
@@ -32,7 +21,7 @@ export default class CardReader {
         }
     }
 
-    private static choiceFromObject(data: any): Choice {
+    private choiceFromObject(data: any): Choice {
         const text: string = data.text;
         const effectData: EffectData = data.effect;
         const effect = new ChoiceEffect(
