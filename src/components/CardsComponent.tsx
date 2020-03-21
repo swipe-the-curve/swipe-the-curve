@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card } from '../core/domain/card';
+import { Card, EventCard, SelectionCard } from '../core/domain/card';
 import { Swipeable, direction } from 'react-deck-swiper';
 import CardComponent from './CardComponent';
 
@@ -12,12 +12,16 @@ const CardsComponent: React.FunctionComponent<CardsProps> = (props) => {
 
     const handleOnSwipe = (swipeDirection: direction) => {
         if (swipeDirection === direction.RIGHT) {
-            setCount(count - 1)
-            return;
+            let actualCard = props.cards[count] as SelectionCard
+            setCount(count + 1)
+            console.log(actualCard.leftChoice)
+            return
         }
 
         if (swipeDirection === direction.LEFT) {
+            let actualCard = props.cards[count] as SelectionCard
             setCount(count + 1)
+            console.log(actualCard.rightChoice)
             return;
         }
     }

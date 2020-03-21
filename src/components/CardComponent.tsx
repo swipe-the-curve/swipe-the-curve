@@ -6,8 +6,6 @@ interface CardProps {
     card: Card
 }
 const CardComponent: React.FunctionComponent<CardProps> =(props) => {
-    
-    var card: Card = new EventCard("test", new Choice("Test", new ChoiceEffect(0, 0, 0, 0, 0)))
     return (<div className="card">
         <IonCard>
             <IonCardContent>
