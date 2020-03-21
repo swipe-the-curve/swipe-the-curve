@@ -1,5 +1,6 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonGrid, IonRow, IonCol, IonIcon } from '@ionic/react';
 import { heart, people, cash } from 'ionicons/icons'
+import SlideComponent from '../ui/SlideComponent';
 import React from 'react';
 import './Home.css';
 
@@ -28,7 +29,7 @@ const Home: React.FC = () => {
             Curve
           </IonRow>
           <IonRow className="chartstack-container">
-            <IonCol>Chartstack</IonCol>
+            <IonCol><SlideComponent/></IonCol>
           </IonRow>
         </IonGrid>
       </IonContent>
