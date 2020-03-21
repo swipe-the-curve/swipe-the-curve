@@ -1,7 +1,7 @@
 
 
 ion-content {
-  --background: url('../components/images/bg.png') -40px -20px/auto 104% no-repeat;
+  --background: url('../components/images/bg.png') -40px -20px/104% 104% no-repeat;
 }
 
 ion-content ion-toolbar {
