@@ -29,7 +29,7 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: Ionic Build
       run: |
-        npm install -G @ionic/cli
+        npm install -g @ionic/cli
         NPM_PREFIX=$(npm config get prefix)
         ls -ahl $NPM_PREFIX/bin
         $NPM_PREFIX/bin/ionic build
