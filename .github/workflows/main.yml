@@ -46,11 +46,10 @@ jobs:
       uses: actions/download-artifact@v1
       with:
         name: swipe-the-curve-web
-    
-    - name: Print folder structure (DEBUG)
-      run: |
-        ls -ahl swipe-the-curve-web
-        export TARGET_FOLDER=${GITHUB_REF##*/}
+  
+    - name: Get Tag Name
+      id: get_tag
+      run: echo ::set-output name=GIT_TAG::$(echo ${GITHUB_REF##*/})
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
@@ -58,6 +57,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
         FOLDER: swipe-the-curve-web/
+        TARGET_FOLDER: ${{ steps.get_tag.outputs.GIT_TAG }}
         DEBUG: true
         GIT_CONFIG_NAME: Dr. Corona
         GIT_CONFIG_EMAIL: dr.corona@the-imperfection.de
