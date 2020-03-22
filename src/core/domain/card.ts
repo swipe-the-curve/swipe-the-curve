@@ -58,10 +58,10 @@ export class ChoiceEffect {
 
 export function createGameLostEvent(message: string): EventCard {
     const effect = new ChoiceEffect(0, 0, 0, 0);
-    return new EventCard("L", message, new Choice("Na gut", effect));
+    return new EventCard("L", message, new Choice("Na gut...", effect));
 }
 
 export function createGameWonEvent(message: string): EventCard {
     const effect = new ChoiceEffect(0, 0, 0, 0);
-    return new EventCard("W", message, new Choice("Oh Yeah", effect));
+    return new EventCard("W", message, new Choice("Oh Yeah!", effect));
 }

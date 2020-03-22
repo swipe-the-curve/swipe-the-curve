@@ -9,6 +9,7 @@ export class Game {
     readonly epidemicStates: EpidemicState[]
     readonly model: EpidemicModel
     readonly gameState: GameState
+    private hasStarted = false
     cards: Card[] = []
 
     readonly stateListeners: StateListener[];
@@ -19,8 +20,7 @@ export class Game {
         const infectionState = new InfectionState(country, disease, 0.0004)
         this.gameState = new GameState(infectionState, country)
         this.model = new EpidemicModel(0, country.population)
-        // TODO set this later if we want to go through some cards without any infections in our country
-        this.model.infected = 1
+        this.model.infected = 0
         const initialEpidemicState = new EpidemicState(0, 0, 0)
         initialEpidemicState.healthcareSystemCapacity = Math.floor(infectionState.healthcareSystemCapacity * country.population)
         this.epidemicStates = [initialEpidemicState]
@@ -42,6 +42,22 @@ export class Game {
     }
 
     public step(effect: ChoiceEffect) {
+        if (this.gameState.currentCard!.id === "A1") {
+            this.model.infected = 1;
+            this.hasStarted = true;
+            const patientZero = new EpidemicState(0, 1, 0)
+            patientZero.healthcareSystemCapacity = Math.floor(this.gameState.infectionState.healthcareSystemCapacity * this.gameState.country.population)
+            this.epidemicStates.push(patientZero);
+            this.gameState.currentCard = this.nextCard();
+            this.notifyListeners();
+            return;
+        }
+        if (!this.hasStarted) {
+            this.gameState.currentCard = this.nextCard();
+            this.notifyListeners();
+            return;
+        }
+
         this.gameState.populationMood += effect.populationMood
         this.gameState.economy += effect.economy
         this.gameState.infectionState.healthcareSystemCapacity = this.gameState.infectionState.healthcareSystemCapacity * (1 + effect.healthSystemCapacity)
