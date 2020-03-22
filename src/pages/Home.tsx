@@ -32,7 +32,7 @@ const Home: React.FC = () => {
           <IonRow className="resource-container">
             <IonCol>
               <svg xmlns='http://www.w3.org/2000/svg' height='20%' viewBox='0 0 24 24'>
-                <title>Heart</title>
+                <title>Health</title>
                 <defs>
                   <linearGradient id="progressHeart" x1="0" y1="1" x2="0" y2="0">
                     <stop id="stop1Heart" offset={heartLevel} stopColor="red" />
@@ -48,7 +48,7 @@ const Home: React.FC = () => {
             </IonCol>
             <IonCol>
               <svg xmlns='http://www.w3.org/2000/svg' height='20%' viewBox='0 0 512 512'>
-                <title>People</title>
+                <title>Mood</title>
                 <defs>
                   <linearGradient id="progressPeople" x1="0" y1="1" x2="0" y2="0">
                     <stop id="stop1People" offset={feelLevel} stopColor="lightblue" />
