@@ -31,9 +31,9 @@ const data = [
 const mapStates = (epidemicStates: EpidemicState[]) => {
   const mappedEpidemicState = epidemicStates.map(epidemicState => {
     const entry = {
-      uv: epidemicState.infected,
-      pv: epidemicState.recovered,
-      amt: epidemicState.dead,
+      infected: epidemicState.infected,
+      recovered: epidemicState.recovered,
+      dead: epidemicState.dead,
     };
 
 
@@ -67,9 +67,9 @@ const Curve: React.FC = () => {
             }}
           >
             <Tooltip />
-            <Area isAnimationActive={false} type="monotone" dataKey="uv" stackId="1" stroke="#8884d8" fill="#8884d8" />
-            <Area isAnimationActive={false} type="monotone" dataKey="pv" stackId="1" stroke="#82ca9d" fill="#82ca9d" />
-            <Area isAnimationActive={false} type="monotone" dataKey="amt" stackId="1" stroke="#ffc658" fill="#ffc658" />
+            <Area isAnimationActive={false} type="monotone" dataKey="infected" stackId="1" stroke="#8884d8" fill="#8884d8" />
+            <Area isAnimationActive={false} type="monotone" dataKey="recovered" stackId="1" stroke="#82ca9d" fill="#82ca9d" />
+            <Area isAnimationActive={false} type="monotone" dataKey="dead" stackId="1" stroke="#ffc658" fill="#ffc658" />
           </AreaChart>
         </ResponsiveContainer>
     </div>
