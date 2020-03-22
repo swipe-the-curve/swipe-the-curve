@@ -22,11 +22,14 @@ export class Game {
             this.gameState.currentCard = this.nextCard();
             this.notifyListeners();
         });
-        this.gameState = new GameState(new InfectionState(country, disease, 0.0004), country)
+        const infectionState = new InfectionState(country, disease, 0.0004)
+        this.gameState = new GameState(infectionState, country)
         this.model = new EpidemicModel(0, country.population)
         // TODO set this later if we want to go through some cards without any infections in our country
         this.model.infected = 1
-        this.epidemicStates = [new EpidemicState(0, 0, 0)]
+        const initialEpidemicState = new EpidemicState(0, 0, 0)
+        initialEpidemicState.healthcareSystemCapacity = infectionState.healthcareSystemCapacity * country.population
+        this.epidemicStates = [initialEpidemicState]
         this.stateListeners = []
     }
 
@@ -37,10 +40,11 @@ export class Game {
         this.gameState.infectionState.rateOfQuarantining += effect.rateOfQuarantining
 
         var newEpidemicState = this.model.step(
-            this.gameState.infectionState.rateOfInfection,
+            this.gameState.infectionState.rateOfInfection / this.gameState.country.population,
             this.gameState.infectionState.rateOfDeath(this.epidemicStates[this.epidemicStates.length - 1]),
             this.gameState.infectionState.rateOfImmunity
         )
+        newEpidemicState.healthcareSystemCapacity = this.gameState.infectionState.healthcareSystemCapacity  * this.gameState.country.population
         this.epidemicStates.push(newEpidemicState)
 
         this.gameState.currentCard = this.nextCard();
@@ -103,7 +107,7 @@ export class InfectionState {
         const absoluteHealthcareSystemCapacity = this.healthcareSystemCapacity * this.country.population;
         const overload = Math.max(currentEpidemicState.infected - absoluteHealthcareSystemCapacity, 0);
         const overloadFactor = overload / absoluteHealthcareSystemCapacity;
-        return this.disease.rateOfDeath * (1 + overloadFactor);
+        return Math.min(this.disease.rateOfDeath * (1 + overloadFactor), 1);
     }
 
     public get rateOfInfection() : number {
