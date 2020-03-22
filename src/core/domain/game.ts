@@ -15,7 +15,7 @@ export class Game {
     constructor() {
         var disease = new Disease("Corona", 2.3, 0.005, 0)
         var country = new Country("SCHLAND", 80000000)
-        fetch("assets/cards/default.json")
+        fetch(process.env.PUBLIC_URL + "/assets/cards/default.json")
         .then(r => r.json())
         .then(d => {
             this.cards = new CardReader().fromObject(d).reverse();
