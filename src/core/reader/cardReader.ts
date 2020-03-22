@@ -7,15 +7,16 @@ export default class CardReader extends JsonArrayReader<Card> {
 
     protected elementFromObject(data: any): Card {
         const cardType: CardType = data.type.toLowerCase();
+        const id: string = data.id;
         const text: string = data.text;
         switch (cardType) {
             case "selection":
                 const leftChoice = this.choiceFromObject(data.leftChoice);
                 const rightChoice = this.choiceFromObject(data.rightChoice);
-                return new SelectionCard(text, leftChoice, rightChoice);
+                return new SelectionCard(id, text, leftChoice, rightChoice);
             case "event":
                 const choice = this.choiceFromObject(data.choice);
-                return new EventCard(text, choice);
+                return new EventCard(id, text, choice);
             default:
                 throw new Error(`Can't create cards of type ${cardType}`);
         }

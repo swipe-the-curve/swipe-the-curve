@@ -31,7 +31,7 @@ export class Game {
         // TODO set this later if we want to go through some cards without any infections in our country
         this.model.infected = 1
         const initialEpidemicState = new EpidemicState(0, 0, 0)
-        initialEpidemicState.healthcareSystemCapacity = infectionState.healthcareSystemCapacity * country.population
+        initialEpidemicState.healthcareSystemCapacity = Math.floor(infectionState.healthcareSystemCapacity * country.population)
         this.epidemicStates = [initialEpidemicState]
         this.stateListeners = []
     }
@@ -39,7 +39,7 @@ export class Game {
     public step(effect: ChoiceEffect) {
         this.gameState.populationMood += effect.populationMood
         this.gameState.economy += effect.economy
-        this.gameState.infectionState.healthcareSystemCapacity += effect.healthSystemCapacity
+        this.gameState.infectionState.healthcareSystemCapacity = this.gameState.infectionState.healthcareSystemCapacity * (1 + effect.healthSystemCapacity)
         this.gameState.infectionState.rateOfQuarantining += effect.rateOfQuarantining
 
         var newEpidemicState = this.model.step(
@@ -47,7 +47,7 @@ export class Game {
             this.gameState.infectionState.rateOfDeath(this.epidemicStates[this.epidemicStates.length - 1]),
             this.gameState.infectionState.rateOfImmunity
         )
-        newEpidemicState.healthcareSystemCapacity = this.gameState.infectionState.healthcareSystemCapacity  * this.gameState.country.population
+        newEpidemicState.healthcareSystemCapacity = Math.floor(this.gameState.infectionState.healthcareSystemCapacity  * this.gameState.country.population)
         this.epidemicStates.push(newEpidemicState)
 
         this.infectedForecasts = [];

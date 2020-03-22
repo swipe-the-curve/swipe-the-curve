@@ -1,6 +1,7 @@
 export class Card  {
 
     constructor (
+        public id: string,
         public text: string
         // TODO Theme, category, image, source
     ) { }
@@ -10,11 +11,12 @@ export class Card  {
 export class SelectionCard extends Card {
 
     constructor (
+        id: string,
         text: string,
         public leftChoice: Choice,
         public rightChoice: Choice
     ) {
-        super(text);
+        super(id, text);
     }
 
 }
@@ -22,10 +24,11 @@ export class SelectionCard extends Card {
 export class EventCard extends SelectionCard {
 
     constructor (
+        id: string,
         text: string,
         public choice: Choice,
     ) {
-        super(text, choice, choice);
+        super(id, text, choice, choice);
     }
 
 }
@@ -55,10 +58,10 @@ export class ChoiceEffect {
 
 export function createGameLostEvent(message: string): EventCard {
     const effect = new ChoiceEffect(0, 0, 0, 0);
-    return new EventCard(message, new Choice("Na gut", effect));
+    return new EventCard("L", message, new Choice("Na gut", effect));
 }
 
 export function createGameWonEvent(message: string): EventCard {
     const effect = new ChoiceEffect(0, 0, 0, 0);
-    return new EventCard(message, new Choice("Oh Yeah", effect));
+    return new EventCard("W", message, new Choice("Oh Yeah", effect));
 }

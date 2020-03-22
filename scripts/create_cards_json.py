@@ -15,7 +15,7 @@ SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 # The ID and range of a sample spreadsheet.
 SPREADSHEET_ID = '1rsk73_oCuZdysI27fBRy5_sEkSR3oHR1aVG0aiP1aDE'
-RANGE_NAME = 'B8:K27'
+RANGE_NAME = 'A9:K36'
 
 creds = None
 # The file token.pickle stores the user's access and refresh tokens, and is
@@ -41,65 +41,67 @@ service = build('sheets', 'v4', credentials=creds)
 # Call the Sheets API
 sheet = service.spreadsheets()
 result = sheet.values().get(spreadsheetId=SPREADSHEET_ID,
-                            range=RANGE_NAME).execute()
+                            range=RANGE_NAME,
+                            valueRenderOption='UNFORMATTED_VALUE').execute()
 
-
-delta_mapping = {
-    '0': 0,
-    'negativ': -0.01,
-    'positiv': 0.01,
-    'stark negativ': -0.1,
-    'stark positiv': 0.1,
-}
 
 cards = []
 
 for row in result['values']:
-    unparsed_text = row[0]
+    unparsed_text = row[1]
     text, choices = unparsed_text.split('\nL: ')
     left_choice, right_choice = choices.split('\nR: ')
-    requires = row[1] # Nothing todo with it yet
+    requires = row[2] # Nothing todo with it yet
     card = {
         "type": "Selection",
         "text": text,
+        "id": row[0],
         "leftChoice": {
             "text": left_choice,
             "effect": {
-                "populationMood": delta_mapping[row[4]],
-                "economy":  delta_mapping[row[3]],
-                "rateOfQuarantining":  delta_mapping[row[2]],
-                "healthSystemCapacity": 0,
+                "populationMood": row[3],
+                "economy": row[4],
+                "rateOfQuarantining": row[5],
+                "healthSystemCapacity": row[6],
             }
         },
         "rightChoice": {
             "text": right_choice,
             "effect": {
-                "populationMood": delta_mapping[row[8]],
-                "economy":  delta_mapping[row[7]],
-                "rateOfQuarantining":  delta_mapping[row[6]],
-                "healthSystemCapacity": 0,
+                "populationMood": row[7],
+                "economy": row[8],
+                "rateOfQuarantining": row[9],
+                "healthSystemCapacity": row[10],
             }
         }
     }
     cards.append(card)
 
-RANGE_NAME = 'B54:F73'
+RANGE_NAME = 'A53:G67'
 
 result = sheet.values().get(spreadsheetId=SPREADSHEET_ID,
-                            range=RANGE_NAME).execute()
+                            range=RANGE_NAME,
+                            valueRenderOption='UNFORMATTED_VALUE').execute()
 
 for row in result['values']:
-    requires = row[1] # Nothing todo with it yet
+    unparsed_text = row[1]
+    if '\nT: ' in unparsed_text:
+        text, choice_text = unparsed_text.split('\nT: ')
+    else:
+        text = unparsed_text
+        choice_text = "Hmpf"
+    requires = row[2] # Nothing todo with it yet
     card = {
         "type": "Event",
-        "text": row[0],
+        "text": text,
+        "id": row[0],
         "choice": {
-            "text": "Hmpf",
+            "text": choice_text,
             "effect": {
-                "populationMood": delta_mapping[row[4]],
-                "economy":  delta_mapping[row[3]],
-                "rateOfQuarantining":  delta_mapping[row[2]],
-                "healthSystemCapacity": 0,
+                "populationMood": row[3],
+                "economy": row[4],
+                "rateOfQuarantining": row[5],
+                "healthSystemCapacity": row[6],
             }
         }
     }
