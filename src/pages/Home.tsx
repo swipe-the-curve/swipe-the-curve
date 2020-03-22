@@ -41,7 +41,7 @@ const Home: React.FC = () => {
                 </defs>
                 <path
                   transform="translate(0,0)"
-                  d='M24 8h-8v-8h-3v8h-8v3h8v8h3v-8h8z'
+                  d='M24 8h-8v-8h-6v8h-8v6h8v8h6v-8h8z'
                   fill="url(#progressHeart)"
                 />
               </svg>
