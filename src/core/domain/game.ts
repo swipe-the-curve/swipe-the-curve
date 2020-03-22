@@ -1,6 +1,6 @@
 import { EpidemicModel, EpidemicState } from "../epidemicmodel"
 import { Disease, Country } from "./common";
-import { ChoiceEffect, Card } from "./card";
+import { ChoiceEffect, Card, createGameLostEvent, createGameWonEvent } from "./card";
 import CardReader from "../reader/cardReader";
 
 export class Game {
@@ -47,7 +47,21 @@ export class Game {
         newEpidemicState.healthcareSystemCapacity = this.gameState.infectionState.healthcareSystemCapacity  * this.gameState.country.population
         this.epidemicStates.push(newEpidemicState)
 
-        this.gameState.currentCard = this.nextCard();
+        if (this.gameState.populationMood <= 0 || this.gameState.economy <= 0) {
+            var lossMessage = "";
+            if (this.gameState.populationMood <= 0) {
+                lossMessage = "Die Bevölkerung rebelliert und stürzt die Regierung.";
+            }
+            if (this.gameState.economy <= 0) {
+                lossMessage = "Die Wirtschaft bricht zusammen und die Grundversorgung kann nicht mehr gewährleistet werden."
+            }
+            this.gameState.currentCard = createGameLostEvent(lossMessage);
+        } else if (newEpidemicState.infected === 0) {
+            this.gameState.currentCard = createGameWonEvent("Die Krise ist bewältigt ohne die Gesellschaft zu zerstören!")
+        } else {
+            this.gameState.currentCard = this.nextCard();
+        }
+
         this.notifyListeners();
     }
 
