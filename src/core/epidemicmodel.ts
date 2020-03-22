@@ -22,6 +22,12 @@ export class EpidemicModel {
         this.infected = this.infected + newInfected - newRecovered - newDead
         this.recovered = this.recovered + newRecovered
         this.dead = this.dead + newDead
+
+        if (newInfected == 0 && newRecovered == 0 && newDead == 0) {
+            // Set this because otherwise we will always have 1 infected in the end
+            this.infected = 0
+        }
+
         return new EpidemicState(this.recovered, this.infected, this.dead)
     }
 }
