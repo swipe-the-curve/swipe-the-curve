@@ -8,10 +8,6 @@ ion-content {
   font-family: 'Verdana';
 }
 
-ion-content ion-toolbar {
-  --background: translucent;
-}
-
 ion-grid {
   text-align: center;
   max-width: 560px;
@@ -32,8 +28,9 @@ ion-grid {
   height: 25vh;
   width: 100%;
   margin-top: 6vh;
-  padding-top: 20%;
+  padding-top: 25%;
   overflow: hidden;
+  font-size: 1.5vh;
 }
 
 .cardstack-container{
@@ -51,7 +48,7 @@ ion-grid {
   margin-top: -1vh;
   padding: 10%;
   color: black;
-  font-size: 26px;
+  font-size: 3vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -83,13 +80,16 @@ ion-grid {
   margin-right: 0px;
   margin-top: 3.2vh;
   padding: 12px;
-  width: 280px;
+  width: 50%;
+  height: 10vh;
+  overflow: hidden;
   color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   cursor: pointer;
   box-shadow: 0px 0px 4px 0.4px #000;
+  font-size: 1.8vh;
 }
 
 .leftChoice {
@@ -130,4 +130,8 @@ ion-grid {
 
 .eventtitle {
   text-decoration: underline;
+}
+
+.longtext {
+  font-size: 2vh;
 }
