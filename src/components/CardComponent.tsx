@@ -1,9 +1,9 @@
 import React from 'react';
 import { IonCard, IonCardContent } from '@ionic/react';
-import { SelectionCard } from '../core/domain/card';
+import { Card } from '../core/domain/card';
 
 interface CardProps {
-    card: SelectionCard
+    card: Card
 }
 const CardComponent: React.FunctionComponent<CardProps> = (props) => {
     return (<div className="card">

@@ -1,28 +1,38 @@
-import React, { useState } from 'react';
-import { SelectionCard } from '../core/domain/card';
+import React, { useState, useEffect } from 'react';
+import { SelectionCard, Card, EventCard, Choice, ChoiceEffect } from '../core/domain/card';
 import { Swipeable, direction } from 'react-deck-swiper';
 import CardComponent from './CardComponent';
-
+import { game } from '../core';
 
 interface CardsProps {
     cards: Array<SelectionCard>
 }
 const CardsComponent: React.FunctionComponent<CardsProps> = (props) => {
 
-    const [count, setCount] = useState(0);
+    const [card, setCard] = useState(new EventCard("test", new Choice("Test", new ChoiceEffect(0, 0, 0, 0))) as Card);
+
+    useEffect(() => {
+        console.log("addEventlistener");
+        game.addStateListener(() => {
+            if(game.gameState.currentCard){
+                setCard(game.gameState.currentCard)
+            }
+        });
+    }, [])
+
 
     const handleOnSwipe = (swipeDirection: direction) => {
         if (swipeDirection === direction.RIGHT) {
-            let actualCard = props.cards[count] as SelectionCard
-            setCount(count + 1)
-            console.log(actualCard.leftChoice)
+            if (card instanceof SelectionCard) {
+                game.step((card as EventCard).leftChoice.effect)
+            }
             return
         }
 
         if (swipeDirection === direction.LEFT) {
-            let actualCard = props.cards[count] as SelectionCard
-            setCount(count + 1)
-            console.log(actualCard.rightChoice)
+            if (card instanceof SelectionCard) {
+                game.step((card as EventCard).rightChoice.effect)
+            }
             return;
         }
     }
@@ -31,7 +41,7 @@ const CardsComponent: React.FunctionComponent<CardsProps> = (props) => {
         <div>
             <Swipeable onSwipe={handleOnSwipe}>
                 <div className="">
-                    <CardComponent card={props.cards[count]} />
+                    <CardComponent card={card} />
                 </div>
             </Swipeable>
         </div>
