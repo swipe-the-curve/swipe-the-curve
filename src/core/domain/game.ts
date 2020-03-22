@@ -50,9 +50,7 @@ export class Game {
                 this.cards = story.reverse().map(id => {
                     if (id.startsWith("?")) {
                         if (id.includes("E")) {
-                            console.log(randomEarly.length)
                             let randomElement = this.getRandomCardFromEventList(randomEarly)
-                            console.log(randomEarly.length)
                             return cardsById[randomElement];
                         } else if (id.includes("M")) {
                             let randomElement = this.getRandomCardFromEventList(randomMid)
