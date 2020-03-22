@@ -107,7 +107,8 @@ export class InfectionState {
         const absoluteHealthcareSystemCapacity = this.healthcareSystemCapacity * this.country.population;
         const overload = Math.max(currentEpidemicState.infected - absoluteHealthcareSystemCapacity, 0);
         const overloadFactor = overload / absoluteHealthcareSystemCapacity;
-        return Math.min(this.disease.rateOfDeath * (1 + overloadFactor), 1);
+        const rateOfDeathFactor = Math.min(1 + overloadFactor, 2);
+        return Math.min(this.disease.rateOfDeath * rateOfDeathFactor, 1);
     }
 
     public get rateOfInfection() : number {
