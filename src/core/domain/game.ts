@@ -37,8 +37,8 @@ export class Game {
     }
 
     private getRandomCardFromEventList(randomList: string[]): string {
-        let randomIndex = Math.floor(Math.random() * randomEarly.length)
-        let randomElement: string = randomEarly[randomIndex]
+        let randomIndex = Math.floor(Math.random() * randomList.length)
+        let randomElement: string = randomList[randomIndex]
         randomList.splice(randomIndex, 1)
         return randomElement
     }
