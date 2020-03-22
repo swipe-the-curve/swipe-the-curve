@@ -84,7 +84,7 @@ result = sheet.values().get(spreadsheetId=SPREADSHEET_ID,
                             valueRenderOption='UNFORMATTED_VALUE').execute()
 
 for row in result['values']:
-    unparsed_text = row[0]
+    unparsed_text = row[1]
     if '\nT: ' in unparsed_text:
         text, choice_text = unparsed_text.split('\nT: ')
     else:
