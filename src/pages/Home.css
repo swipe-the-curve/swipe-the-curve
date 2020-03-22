@@ -127,3 +127,7 @@ ion-grid {
   margin-left: -80px;
   font-weight: 500;
 }
+
+.eventtitle {
+  text-decoration: underline;
+}
