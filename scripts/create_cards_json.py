@@ -15,7 +15,7 @@ SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 # The ID and range of a sample spreadsheet.
 SPREADSHEET_ID = '1rsk73_oCuZdysI27fBRy5_sEkSR3oHR1aVG0aiP1aDE'
-RANGE_NAME = 'A9:K36'
+RANGE_NAME = 'A9:K39'
 
 creds = None
 # The file token.pickle stores the user's access and refresh tokens, and is
@@ -51,7 +51,6 @@ for row in result['values']:
     unparsed_text = row[1]
     text, choices = unparsed_text.split('\nL: ')
     left_choice, right_choice = choices.split('\nR: ')
-    requires = row[2] # Nothing todo with it yet
     card = {
         "type": "Selection",
         "text": text,
@@ -77,7 +76,7 @@ for row in result['values']:
     }
     cards.append(card)
 
-RANGE_NAME = 'A53:G76'
+RANGE_NAME = 'A54:G79'
 
 result = sheet.values().get(spreadsheetId=SPREADSHEET_ID,
                             range=RANGE_NAME,
@@ -90,7 +89,6 @@ for row in result['values']:
     else:
         text = unparsed_text
         choice_text = "Hmpf"
-    requires = row[2] # Nothing todo with it yet
     card = {
         "type": "Event",
         "text": text,

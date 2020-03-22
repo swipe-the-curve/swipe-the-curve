@@ -644,43 +644,70 @@
         }
     },
     {
-        "type": "Event",
-        "text": "Ereigniskarten",
-        "id": "Nr.",
-        "choice": {
-            "text": "Hmpf",
-            "effect": {
-                "populationMood": "Stimmung",
-                "economy": "Wirtschaft",
-                "rateOfQuarantining": "Quarantäne",
-                "healthSystemCapacity": "Gesundheitssystem"
-            }
-        }
-    },
-    {
-        "type": "Event",
-        "text": "DISCLAIMER: Dies ist ein Spiel basierend auf gefährlichem Halbwissen und keinesfalls eine realistische Simulation der aktuellen Situation und vergangener oder zukünftiger Entscheidungen.",
-        "id": "E0",
-        "choice": {
-            "text": "Ich verstehe",
+        "type": "Selection",
+        "text": "Es gibt eine übersichtliche Anzahl von Infektionen, deren direkte Kontakte ermittelt werden können. ",
+        "id": "A31",
+        "leftChoice": {
+            "text": "Du versuchst alle Infizierten und Kontakte unter Quarantäne zu stellen",
             "effect": {
                 "populationMood": 0,
                 "economy": 0,
-                "rateOfQuarantining": 0,
+                "rateOfQuarantining": 0.05,
+                "healthSystemCapacity": 0
+            }
+        },
+        "rightChoice": {
+            "text": "Du machst nichts",
+            "effect": {
+                "populationMood": 0,
+                "economy": 0,
+                "rateOfQuarantining": -0.2,
                 "healthSystemCapacity": 0
             }
         }
     },
     {
-        "type": "Event",
-        "text": "Der erste Fall des Coronavirus ist in Deutschland aufgetreten.",
-        "id": "E1",
-        "choice": {
-            "text": "Zum Glück bisher nur einer",
+        "type": "Selection",
+        "text": "Die Infektionen steigen weiter an. Einige Experten fordern Schulen und Kindergärten zu schließen, da Kinder häufig asymptomatische Krankheitsverläufe haben.",
+        "id": "A32",
+        "leftChoice": {
+            "text": "Schulen und Kindergärten schließen",
+            "effect": {
+                "populationMood": -0.15,
+                "economy": -0.15,
+                "rateOfQuarantining": 0.15,
+                "healthSystemCapacity": 0
+            }
+        },
+        "rightChoice": {
+            "text": "Erstmal abwarten, die Kinder müssen ja auch betreut werden",
+            "effect": {
+                "populationMood": -0.15,
+                "economy": 0,
+                "rateOfQuarantining": -0.15,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Selection",
+        "text": "Die Urlaubsaison geht zu Ende. Viele Leute kommen aus ihrem Auslandsurlaub zurück.",
+        "id": "A33",
+        "leftChoice": {
+            "text": "Einreisende aus Krisenregionen in 14 tägige Quarantäne stecken",
+            "effect": {
+                "populationMood": -0.2,
+                "economy": -0.1,
+                "rateOfQuarantining": 0.1,
+                "healthSystemCapacity": 0
+            }
+        },
+        "rightChoice": {
+            "text": "nichts machen",
             "effect": {
                 "populationMood": 0,
                 "economy": 0,
-                "rateOfQuarantining": -0.01,
+                "rateOfQuarantining": -0.4,
                 "healthSystemCapacity": 0
             }
         }
@@ -975,6 +1002,48 @@
                 "populationMood": 0.5,
                 "economy": 0.1,
                 "rateOfQuarantining": 0.7,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Event",
+        "text": "Eine Therapie ist entwickelt und schlägt bei 80%.",
+        "id": "E23",
+        "choice": {
+            "text": "Therapie einsetzen",
+            "effect": {
+                "populationMood": 0.5,
+                "economy": 0.1,
+                "rateOfQuarantining": 0.7,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Event",
+        "text": "Im Nachbarland steigt die Zahl der Infizierten in kürzester Zeit stark an. Das Gesundheitssystem ist kurz vor der Überlastung",
+        "id": "E33",
+        "choice": {
+            "text": "Vielleicht sollten Maßnahmen ergriffen werden?",
+            "effect": {
+                "populationMood": -0.1,
+                "economy": 0,
+                "rateOfQuarantining": -0.2,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Event",
+        "text": "Obwohl du Quarantäne angeordnet hast, infizieren sich immer mehr Leute mit dem Virus",
+        "id": "E34",
+        "choice": {
+            "text": "Reichen die Maßnahmen?",
+            "effect": {
+                "populationMood": -0.1,
+                "economy": 0,
+                "rateOfQuarantining": -0.2,
                 "healthSystemCapacity": 0
             }
         }
