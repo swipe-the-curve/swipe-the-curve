@@ -37,7 +37,7 @@ export class Game {
         this.gameState.infectionState.rateOfQuarantining += effect.rateOfQuarantining
 
         var newEpidemicState = this.model.step(
-            this.gameState.infectionState.rateOfInfection,
+            this.gameState.infectionState.rateOfInfection / this.gameState.country.population,
             this.gameState.infectionState.rateOfDeath(this.epidemicStates[this.epidemicStates.length - 1]),
             this.gameState.infectionState.rateOfImmunity
         )
@@ -103,7 +103,7 @@ export class InfectionState {
         const absoluteHealthcareSystemCapacity = this.healthcareSystemCapacity * this.country.population;
         const overload = Math.max(currentEpidemicState.infected - absoluteHealthcareSystemCapacity, 0);
         const overloadFactor = overload / absoluteHealthcareSystemCapacity;
-        return this.disease.rateOfDeath * (1 + overloadFactor);
+        return Math.min(this.disease.rateOfDeath * (1 + overloadFactor), 1);
     }
 
     public get rateOfInfection() : number {

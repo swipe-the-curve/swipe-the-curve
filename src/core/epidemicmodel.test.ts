@@ -2,6 +2,7 @@ import { EpidemicModel } from "./epidemicmodel"
 
 test("run epidemic simulation", () => {
     const population = 80000000
+                 
     const model = new EpidemicModel(1, population)
 
     var state = model.step(15 / population, 0.05, 0)
