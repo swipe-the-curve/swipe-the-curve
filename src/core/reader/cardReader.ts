@@ -11,8 +11,17 @@ export default class CardReader extends JsonArrayReader<Card> {
         const text: string = data.text;
         switch (cardType) {
             case "selection":
-                const leftChoice = this.choiceFromObject(data.leftChoice);
-                const rightChoice = this.choiceFromObject(data.rightChoice);
+                // randomized choice
+                const rand = Math.floor(Math.random() * Math.floor(2));
+                var leftChoice: Choice
+                var rightChoice: Choice
+                if (rand > 0) {
+                    leftChoice = this.choiceFromObject(data.leftChoice);
+                    rightChoice = this.choiceFromObject(data.rightChoice);
+                } else {
+                    rightChoice = this.choiceFromObject(data.leftChoice);
+                    leftChoice = this.choiceFromObject(data.rightChoice);
+                }
                 return new SelectionCard(id, text, leftChoice, rightChoice);
             case "event":
                 const choice = this.choiceFromObject(data.choice);
