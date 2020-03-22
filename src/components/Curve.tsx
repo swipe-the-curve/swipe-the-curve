@@ -1,6 +1,6 @@
 import { } from '@ionic/react';
 import React, { useState, useEffect } from 'react';
-import { ResponsiveContainer, AreaChart, Area, Tooltip, } from 'recharts';
+import { ResponsiveContainer, Area, Tooltip, ComposedChart, Line} from 'recharts';
 import { game } from '../core';
 import { EpidemicState } from '../core/epidemicmodel';
 
@@ -34,6 +34,7 @@ const mapStates = (epidemicStates: EpidemicState[]) => {
       infected: epidemicState.infected,
       recovered: epidemicState.recovered,
       dead: epidemicState.dead,
+      capacity: epidemicState.healthcareSystemCapacity
     };
 
 
@@ -60,17 +61,18 @@ const Curve: React.FC = () => {
   return (
     <div className="full-width">
         <ResponsiveContainer height='100%' width='100%'>
-          <AreaChart
+          <ComposedChart
             data={epidemicState}
             margin={{
               left: -2,
             }}
           >
             <Tooltip />
-            <Area isAnimationActive={false} type="monotone" dataKey="infected" stackId="1" stroke="#8884d8" fill="#8884d8" />
-            <Area isAnimationActive={false} type="monotone" dataKey="recovered" stackId="1" stroke="#82ca9d" fill="#82ca9d" />
-            <Area isAnimationActive={false} type="monotone" dataKey="dead" stackId="1" stroke="#ffc658" fill="#ffc658" />
-          </AreaChart>
+            <Area isAnimationActive={false} type="monotone" dataKey="infected" stackId="1" stroke="#8884d8" fill="#8884d8" dot={false}/>
+            <Area isAnimationActive={false} type="monotone" dataKey="recovered" stackId="1" stroke="#82ca9d" fill="#82ca9d" dot={false}/>
+            <Area isAnimationActive={false} type="monotone" dataKey="dead" stackId="1" stroke="#ffc658" fill="#ffc658" dot={false}/>
+            <Line isAnimationActive={false} type="monotone" dataKey="capacity" stroke="#000000" strokeDasharray="3" dot={false}/>
+          </ComposedChart>
         </ResponsiveContainer>
     </div>
   );

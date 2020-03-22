@@ -27,6 +27,7 @@ export class EpidemicModel {
 }
 
 export class EpidemicState {
+    public healthcareSystemCapacity = 0
     constructor(
         public readonly recovered: number,
         public readonly infected: number,
