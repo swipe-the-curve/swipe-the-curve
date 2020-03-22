@@ -24,11 +24,6 @@ const Home: React.FC = () => {
 
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Swipe to #FlattenTheCurve</IonTitle>
-        </IonToolbar>
-      </IonHeader>
       <IonContent>
         <IonGrid>
           <IonRow className="curve-container">
