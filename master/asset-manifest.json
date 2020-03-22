@@ -13,8 +13,8 @@
     "static/js/5.6bef308d.chunk.js": "https://swipe-the-curve.github.io/swipe-the-curve/master/static/js/5.6bef308d.chunk.js",
     "static/js/5.6bef308d.chunk.js.map": "https://swipe-the-curve.github.io/swipe-the-curve/master/static/js/5.6bef308d.chunk.js.map",
     "main.css": "https://swipe-the-curve.github.io/swipe-the-curve/master/static/css/main.82aad755.chunk.css",
-    "main.js": "https://swipe-the-curve.github.io/swipe-the-curve/master/static/js/main.f19a5cdc.chunk.js",
-    "main.js.map": "https://swipe-the-curve.github.io/swipe-the-curve/master/static/js/main.f19a5cdc.chunk.js.map",
+    "main.js": "https://swipe-the-curve.github.io/swipe-the-curve/master/static/js/main.f74ff9c9.chunk.js",
+    "main.js.map": "https://swipe-the-curve.github.io/swipe-the-curve/master/static/js/main.f74ff9c9.chunk.js.map",
     "runtime-main.js": "https://swipe-the-curve.github.io/swipe-the-curve/master/static/js/runtime-main.5caab92f.js",
     "runtime-main.js.map": "https://swipe-the-curve.github.io/swipe-the-curve/master/static/js/runtime-main.5caab92f.js.map",
     "static/css/8.1594e46e.chunk.css": "https://swipe-the-curve.github.io/swipe-the-curve/master/static/css/8.1594e46e.chunk.css",
@@ -193,7 +193,7 @@
     "static/js/94.91393d01.chunk.js": "https://swipe-the-curve.github.io/swipe-the-curve/master/static/js/94.91393d01.chunk.js",
     "static/js/94.91393d01.chunk.js.map": "https://swipe-the-curve.github.io/swipe-the-curve/master/static/js/94.91393d01.chunk.js.map",
     "index.html": "https://swipe-the-curve.github.io/swipe-the-curve/master/index.html",
-    "precache-manifest.228ef0f3df16324aceb5779e655f3324.js": "https://swipe-the-curve.github.io/swipe-the-curve/master/precache-manifest.228ef0f3df16324aceb5779e655f3324.js",
+    "precache-manifest.dbe2bf3de42e147b230af1e14371eb52.js": "https://swipe-the-curve.github.io/swipe-the-curve/master/precache-manifest.dbe2bf3de42e147b230af1e14371eb52.js",
     "service-worker.js": "https://swipe-the-curve.github.io/swipe-the-curve/master/service-worker.js",
     "static/css/8.1594e46e.chunk.css.map": "https://swipe-the-curve.github.io/swipe-the-curve/master/static/css/8.1594e46e.chunk.css.map",
     "static/css/main.82aad755.chunk.css.map": "https://swipe-the-curve.github.io/swipe-the-curve/master/static/css/main.82aad755.chunk.css.map",
@@ -209,6 +209,6 @@
     "static/css/8.1594e46e.chunk.css",
     "static/js/8.4579b26e.chunk.js",
     "static/css/main.82aad755.chunk.css",
-    "static/js/main.f19a5cdc.chunk.js"
+    "static/js/main.f74ff9c9.chunk.js"
   ]
 }
