@@ -7,7 +7,7 @@ import { IonRow, IonCol, IonButton, IonGrid } from '@ionic/react';
 
 const CardsComponent: React.FunctionComponent = () => {
 
-    const [card, setCard] = useState(new EventCard("test", new Choice("Test", new ChoiceEffect(0, 0, 0, 0))) as Card);
+    const [card, setCard] = useState(new EventCard("0", "test", new Choice("Test", new ChoiceEffect(0, 0, 0, 0))) as Card);
 
     useEffect(() => {
         console.log("addEventlistener");
