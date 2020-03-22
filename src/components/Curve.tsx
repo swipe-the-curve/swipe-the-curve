@@ -32,27 +32,28 @@ const Curve: React.FC = () => {
 
   const currentCapacity = epidemicState && epidemicState.length > 0 && epidemicState[epidemicState.length - 1].Kapazität || 0;
   const currentImpacted = epidemicState && epidemicState.length > 0 && epidemicState[epidemicState.length - 1].Infiziert + epidemicState[epidemicState.length - 1].Genesen + epidemicState[epidemicState.length - 1].Tot || 0;
+  const currentDead = epidemicState && epidemicState.length > 0 && epidemicState[epidemicState.length - 1].Tot || 0;
 
   return (
-    <div className="full-width full-height">
-        <ResponsiveContainer height='100%' width='100%'>
-          <ComposedChart
-            data={epidemicState}
-            margin={{
-              left: -2,
-              top: 10,
-            }}
-          >
-            <Tooltip />
-            <Legend verticalAlign="top" height={36}/>
-            <Area isAnimationActive={false} type="monotone" dataKey="Infiziert" stackId="1" stroke="#f53d3d" fill="#f53d3d" />
-            <Area isAnimationActive={false} type="monotone" dataKey="Genesen" stackId="1" stroke="#4db374" fill="#4db374" />
-            <Area isAnimationActive={false} type="monotone" dataKey="Tot" stackId="1" stroke="#3b1111" fill="#3b1111" />
-            {currentCapacity && (currentImpacted * 8 >= currentCapacity) && 
-              <Line isAnimationActive={false} dataKey="Kapazität" type="monotone" stroke="black" strokeDasharray="3 3" dot={false} />
-            }
-          </ComposedChart>
-        </ResponsiveContainer>
+    <div className="pos full-width full-height">
+      <ResponsiveContainer height='100%' width='100%'>
+        <ComposedChart
+          data={epidemicState}
+          margin={{
+            left: -2,
+            top: 10,
+          }}
+        >
+          <Tooltip />
+          <Legend verticalAlign="top" height={36}/>
+          <Area isAnimationActive={false} type="monotone" dataKey="Infiziert" stackId="1" stroke="#f53d3d" fill="#f53d3d" />
+          <Area isAnimationActive={false} type="monotone" dataKey="Genesen" stackId="1" stroke="#4db374" fill="#4db374" />
+          {currentCapacity && (currentImpacted * 8 >= currentCapacity) && 
+            <Line isAnimationActive={false} dataKey="Kapazität" type="monotone" stroke="black" strokeDasharray="3 3" dot={false} />
+          }
+        </ComposedChart>
+      </ResponsiveContainer>
+      <div className="tote">Tote: {currentDead}</div>
     </div>
   );
 };

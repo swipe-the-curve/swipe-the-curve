@@ -112,3 +112,18 @@ ion-grid {
   height: 125%;
   margin-top: -60px;
 }
+
+.pos {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  font-weight: 500;
+}
+
+.tote {
+  width: 100px;
+  margin-top: 10px;
+  margin-left: -80px;
+  font-weight: 500;
+}
