@@ -76,7 +76,7 @@ for row in result['values']:
     }
     cards.append(card)
 
-RANGE_NAME = 'A54:G79'
+RANGE_NAME = 'A52:G79'
 
 result = sheet.values().get(spreadsheetId=SPREADSHEET_ID,
                             range=RANGE_NAME,
