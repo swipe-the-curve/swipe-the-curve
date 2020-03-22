@@ -3,7 +3,12 @@ import { Disease, Country } from "./common";
 import { ChoiceEffect, Card, createGameLostEvent, createGameWonEvent } from "./card";
 import CardReader from "../reader/cardReader";
 
-const story: string[] = ["E0", "A1", "E1", "A31", "E34", "A33", "E2", "A32", "A26", "E16", "A9", "E33", "A7", "A22", "A3", "A5", "A6", "A10", "A8", "E9"]
+const story: string[] = ["E0", "A1", "E1", "A31", "E21", "A17", "A33", "?E", "A32", "A26", "A9", "E33", "?E", "A21", "A24", "A25", "?E", "A19"]
+
+const randomEarly: string[] = ["E2", "E16", "E21", "E33", "E34", "E35", "E36"]
+const randomMid: string[] = ["E2", "E16", "E21", "E33", "E34", "E35", "E36"]
+const randomLate: string[] = ["E2", "E16", "E21", "E33", "E34", "E35", "E36"]
+
 export class Game {
 
     readonly epidemicStates: EpidemicState[]
@@ -29,13 +34,39 @@ export class Game {
         this.initializeCards();
     }
 
+    private getRandomCardFromEventList(randomList: string[]): string {
+        let randomIndex = Math.floor(Math.random() * randomEarly.length)
+        let randomElement: string = randomEarly[randomIndex]
+        randomList.splice(randomIndex, 1)
+        return randomElement
+    }
+
     private initializeCards() {
         fetch(process.env.PUBLIC_URL + "/assets/cards/default.json")
             .then(r => r.json())
             .then(d => {
                 const cardsById: { [id: string]: Card } = {};
                 new CardReader().fromObject(d).forEach(c => cardsById[c.id] = c)
-                this.cards = story.reverse().map(id => cardsById[id]);
+                this.cards = story.reverse().map(id => {
+                    if (id.startsWith("?")) {
+                        if (id.includes("E")) {
+                            console.log(randomEarly.length)
+                            let randomElement = this.getRandomCardFromEventList(randomEarly)
+                            console.log(randomEarly.length)
+                            return cardsById[randomElement];
+                        } else if (id.includes("M")) {
+                            let randomElement = this.getRandomCardFromEventList(randomMid)
+                            return cardsById[randomElement];
+                        } else if (id.includes("L")) {
+                            let randomElement = this.getRandomCardFromEventList(randomLate)
+                            return cardsById[randomElement];
+                        } else {
+                            return cardsById[id];
+                        }
+                    } else {
+                        return cardsById[id];
+                    }
+                })
                 this.gameState.currentCard = this.nextCard();
                 this.notifyListeners();
             });
