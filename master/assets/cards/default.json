@@ -7,15 +7,15 @@
             "effect": {
                 "populationMood": 0,
                 "economy": 0,
-                "rateOfQuarantining": -0.01,
+                "rateOfQuarantining": -0.1,
                 "healthSystemCapacity": 0
             }
         },
         "rightChoice": {
             "text": "Bevölkerung informieren",
             "effect": {
-                "populationMood": -0.01,
-                "economy": -0.01,
+                "populationMood": -0.1,
+                "economy": -0.1,
                 "rateOfQuarantining": 0,
                 "healthSystemCapacity": 0
             }
@@ -27,16 +27,16 @@
         "leftChoice": {
             "text": "Du lässt sie auf Staatskosten einfliegen.",
             "effect": {
-                "populationMood": 0.01,
+                "populationMood": 0.1,
                 "economy": 0,
-                "rateOfQuarantining": -0.01,
+                "rateOfQuarantining": -0.1,
                 "healthSystemCapacity": 0
             }
         },
         "rightChoice": {
             "text": "Du wartest ab.",
             "effect": {
-                "populationMood": -0.01,
+                "populationMood": -0.1,
                 "economy": 0,
                 "rateOfQuarantining": 0,
                 "healthSystemCapacity": 0
@@ -49,18 +49,18 @@
         "leftChoice": {
             "text": "Eine Ausgangssperre in Kraft setzten.",
             "effect": {
-                "populationMood": -0.01,
+                "populationMood": -0.1,
                 "economy": 0,
-                "rateOfQuarantining": 0.01,
+                "rateOfQuarantining": 0.1,
                 "healthSystemCapacity": 0
             }
         },
         "rightChoice": {
             "text": "Weiter appellieren.",
             "effect": {
-                "populationMood": 0.01,
+                "populationMood": 0.1,
                 "economy": 0,
-                "rateOfQuarantining": -0.01,
+                "rateOfQuarantining": -0.1,
                 "healthSystemCapacity": 0
             }
         }
@@ -71,8 +71,8 @@
         "leftChoice": {
             "text": "Ein Rettungspaket verabschieden.",
             "effect": {
-                "populationMood": 0.01,
-                "economy": 0.01,
+                "populationMood": 0.1,
+                "economy": 0.1,
                 "rateOfQuarantining": 0,
                 "healthSystemCapacity": 0
             }
@@ -80,8 +80,8 @@
         "rightChoice": {
             "text": "Du wartest ab.",
             "effect": {
-                "populationMood": -0.01,
-                "economy": -0.01,
+                "populationMood": -0.1,
+                "economy": -0.1,
                 "rateOfQuarantining": 0,
                 "healthSystemCapacity": 0
             }
@@ -94,8 +94,8 @@
             "text": "Du schließt Friseurläden",
             "effect": {
                 "populationMood": 0,
-                "economy": -0.01,
-                "rateOfQuarantining": 0.01,
+                "economy": -0.1,
+                "rateOfQuarantining": 0.1,
                 "healthSystemCapacity": 0
             }
         },
@@ -103,8 +103,8 @@
             "text": "Du wartest ab",
             "effect": {
                 "populationMood": 0,
-                "economy": 0.01,
-                "rateOfQuarantining": -0.01,
+                "economy": 0.1,
+                "rateOfQuarantining": -0.1,
                 "healthSystemCapacity": 0
             }
         }
@@ -115,9 +115,9 @@
         "leftChoice": {
             "text": "Du schließt Baumärkte",
             "effect": {
-                "populationMood": -0.01,
-                "economy": -0.01,
-                "rateOfQuarantining": 0.01,
+                "populationMood": -0.1,
+                "economy": -0.1,
+                "rateOfQuarantining": 0.1,
                 "healthSystemCapacity": 0
             }
         },
@@ -137,9 +137,9 @@
         "leftChoice": {
             "text": "Du beschließt, Kranke einfliegen zu lassen und in deinem Land zu behandeln.",
             "effect": {
-                "populationMood": -0.01,
+                "populationMood": -0.1,
                 "economy": 0,
-                "rateOfQuarantining": -0.01,
+                "rateOfQuarantining": -0.1,
                 "healthSystemCapacity": 0
             }
         },
@@ -159,8 +159,8 @@
         "leftChoice": {
             "text": "Du schließt die Grenzen (auch für Warenverkehr) ",
             "effect": {
-                "populationMood": -0.01,
-                "economy": -0.1,
+                "populationMood": -0.1,
+                "economy": -0.3,
                 "rateOfQuarantining": 0,
                 "healthSystemCapacity": 0
             }
@@ -181,8 +181,8 @@
         "leftChoice": {
             "text": "Du lässt die Grenzen schließen",
             "effect": {
-                "populationMood": 0.01,
-                "economy": -0.01,
+                "populationMood": 0.1,
+                "economy": -0.1,
                 "rateOfQuarantining": 0,
                 "healthSystemCapacity": 0
             }
@@ -190,8 +190,8 @@
         "rightChoice": {
             "text": "Du wartest ab.",
             "effect": {
-                "populationMood": -0.01,
-                "economy": 0.01,
+                "populationMood": -0.1,
+                "economy": 0.1,
                 "rateOfQuarantining": 0,
                 "healthSystemCapacity": 0
             }
@@ -205,16 +205,16 @@
             "effect": {
                 "populationMood": 0,
                 "economy": 0,
-                "rateOfQuarantining": 0.01,
+                "rateOfQuarantining": 0.1,
                 "healthSystemCapacity": 0
             }
         },
         "rightChoice": {
             "text": "Du wartest ab.",
             "effect": {
-                "populationMood": -0.01,
+                "populationMood": -0.1,
                 "economy": 0,
-                "rateOfQuarantining": -0.01,
+                "rateOfQuarantining": -0.1,
                 "healthSystemCapacity": 0
             }
         }
@@ -227,14 +227,14 @@
             "effect": {
                 "populationMood": 0,
                 "economy": 0,
-                "rateOfQuarantining": 0.01,
+                "rateOfQuarantining": 0.1,
                 "healthSystemCapacity": 0
             }
         },
         "rightChoice": {
             "text": "Freiheitsstrafen verhängen (4 Wochen)",
             "effect": {
-                "populationMood": -0.01,
+                "populationMood": -0.1,
                 "economy": 0,
                 "rateOfQuarantining": 0,
                 "healthSystemCapacity": 0
@@ -247,7 +247,7 @@
         "leftChoice": {
             "text": "Du zwingst sie zur Arbeitin wichtigen Bereichen (Krankenhäusern, Lebensmittelversorgung...) ?",
             "effect": {
-                "populationMood": 0.01,
+                "populationMood": 0.1,
                 "economy": 0,
                 "rateOfQuarantining": 0,
                 "healthSystemCapacity": 0
@@ -269,8 +269,8 @@
         "leftChoice": {
             "text": "Du führst ein bedingungsloses Grundeinkommen ein",
             "effect": {
-                "populationMood": 0.1,
-                "economy": 0.01,
+                "populationMood": 0.3,
+                "economy": 0.1,
                 "rateOfQuarantining": 0,
                 "healthSystemCapacity": 0
             }
@@ -278,8 +278,8 @@
         "rightChoice": {
             "text": "Du reagierst nicht.",
             "effect": {
-                "populationMood": -0.01,
-                "economy": -0.01,
+                "populationMood": -0.1,
+                "economy": -0.1,
                 "rateOfQuarantining": 0,
                 "healthSystemCapacity": 0
             }
@@ -292,17 +292,17 @@
             "text": "Weiter ans Volk appelieren",
             "effect": {
                 "populationMood": 0,
-                "economy": 0.01,
-                "rateOfQuarantining": -0.01,
+                "economy": 0.1,
+                "rateOfQuarantining": -0.1,
                 "healthSystemCapacity": 0
             }
         },
         "rightChoice": {
             "text": "Polizei einsetzen",
             "effect": {
-                "populationMood": -0.01,
+                "populationMood": -0.1,
                 "economy": 0,
-                "rateOfQuarantining": 0.01,
+                "rateOfQuarantining": 0.1,
                 "healthSystemCapacity": 0
             }
         }
@@ -313,18 +313,18 @@
         "leftChoice": {
             "text": "Freiheits- und Geldstrafen verhängen",
             "effect": {
-                "populationMood": -0.01,
-                "economy": -0.01,
-                "rateOfQuarantining": -0.01,
+                "populationMood": -0.1,
+                "economy": -0.1,
+                "rateOfQuarantining": -0.1,
                 "healthSystemCapacity": 0
             }
         },
         "rightChoice": {
             "text": "Bundeswehr einsetzen",
             "effect": {
-                "populationMood": -0.1,
-                "economy": -0.01,
-                "rateOfQuarantining": -0.1,
+                "populationMood": -0.3,
+                "economy": -0.1,
+                "rateOfQuarantining": -0.3,
                 "healthSystemCapacity": 0
             }
         }
@@ -335,18 +335,18 @@
         "leftChoice": {
             "text": "Die Grenzen bewachen, zur Not mit Gewalt.",
             "effect": {
-                "populationMood": -0.1,
+                "populationMood": -0.3,
                 "economy": 0,
-                "rateOfQuarantining": 0.01,
+                "rateOfQuarantining": 0.1,
                 "healthSystemCapacity": 0
             }
         },
         "rightChoice": {
             "text": "Ein System zur kontrollierten Aufnahme von Flüchtlingen einführen.",
             "effect": {
-                "populationMood": -0.01,
+                "populationMood": -0.1,
                 "economy": 0,
-                "rateOfQuarantining": -0.1,
+                "rateOfQuarantining": -0.3,
                 "healthSystemCapacity": 0
             }
         }
@@ -357,16 +357,16 @@
         "leftChoice": {
             "text": "Ab sofort Inhalte im Internet zensieren",
             "effect": {
-                "populationMood": -0.1,
+                "populationMood": -0.3,
                 "economy": 0,
-                "rateOfQuarantining": 0.01,
+                "rateOfQuarantining": 0.1,
                 "healthSystemCapacity": 0
             }
         },
         "rightChoice": {
             "text": "Mehr Ressourcen zur Aufklärung mobilisieren",
             "effect": {
-                "populationMood": -0.01,
+                "populationMood": -0.1,
                 "economy": 0,
                 "rateOfQuarantining": 0,
                 "healthSystemCapacity": 0
@@ -379,8 +379,8 @@
         "leftChoice": {
             "text": "Eine motivierende Ansprache an das Volk richten",
             "effect": {
-                "populationMood": -0.01,
-                "economy": -0.01,
+                "populationMood": -0.1,
+                "economy": -0.1,
                 "rateOfQuarantining": 0,
                 "healthSystemCapacity": 0
             }
@@ -388,9 +388,9 @@
         "rightChoice": {
             "text": "Jeder Person 1000€ im Monat geben",
             "effect": {
-                "populationMood": 0.1,
-                "economy": 0.1,
-                "rateOfQuarantining": -0.01,
+                "populationMood": 0.3,
+                "economy": 0.3,
+                "rateOfQuarantining": -0.1,
                 "healthSystemCapacity": 0
             }
         }
@@ -410,9 +410,9 @@
         "rightChoice": {
             "text": "Den Zugang zu Altenheimen (u. Ä.) einschränken",
             "effect": {
-                "populationMood": -0.01,
+                "populationMood": -0.1,
                 "economy": 0,
-                "rateOfQuarantining": -0.01,
+                "rateOfQuarantining": -0.1,
                 "healthSystemCapacity": 0
             }
         }
@@ -423,7 +423,7 @@
         "leftChoice": {
             "text": "Du lässt die Lebensmittel rationieren",
             "effect": {
-                "populationMood": 0.01,
+                "populationMood": 0.1,
                 "economy": 0,
                 "rateOfQuarantining": 0,
                 "healthSystemCapacity": 0
@@ -432,7 +432,7 @@
         "rightChoice": {
             "text": "Du macht nichts",
             "effect": {
-                "populationMood": -0.01,
+                "populationMood": -0.1,
                 "economy": 0,
                 "rateOfQuarantining": 0,
                 "healthSystemCapacity": 0
@@ -447,7 +447,7 @@
             "effect": {
                 "populationMood": 0,
                 "economy": 0,
-                "rateOfQuarantining": -0.01,
+                "rateOfQuarantining": -0.1,
                 "healthSystemCapacity": 0
             }
         }
@@ -460,7 +460,7 @@
             "effect": {
                 "populationMood": 0,
                 "economy": 0,
-                "rateOfQuarantining": -0.01,
+                "rateOfQuarantining": -0.1,
                 "healthSystemCapacity": 0
             }
         }
@@ -471,9 +471,9 @@
         "choice": {
             "text": "Hmpf",
             "effect": {
-                "populationMood": -0.1,
-                "economy": -0.01,
-                "rateOfQuarantining": 0.01,
+                "populationMood": -0.3,
+                "economy": -0.1,
+                "rateOfQuarantining": 0.1,
                 "healthSystemCapacity": 0
             }
         }
@@ -484,7 +484,7 @@
         "choice": {
             "text": "Hmpf",
             "effect": {
-                "populationMood": -0.1,
+                "populationMood": -0.3,
                 "economy": 0,
                 "rateOfQuarantining": 0,
                 "healthSystemCapacity": 0
@@ -497,9 +497,9 @@
         "choice": {
             "text": "Hmpf",
             "effect": {
-                "populationMood": -0.01,
+                "populationMood": -0.1,
                 "economy": 0,
-                "rateOfQuarantining": -0.01,
+                "rateOfQuarantining": -0.1,
                 "healthSystemCapacity": 0
             }
         }
@@ -510,7 +510,7 @@
         "choice": {
             "text": "Hmpf",
             "effect": {
-                "populationMood": 0.01,
+                "populationMood": 0.1,
                 "economy": 0,
                 "rateOfQuarantining": 0,
                 "healthSystemCapacity": 0
@@ -523,7 +523,7 @@
         "choice": {
             "text": "Hmpf",
             "effect": {
-                "populationMood": -0.01,
+                "populationMood": -0.1,
                 "economy": 0,
                 "rateOfQuarantining": 0,
                 "healthSystemCapacity": 0
@@ -536,7 +536,7 @@
         "choice": {
             "text": "Hmpf",
             "effect": {
-                "populationMood": 0.01,
+                "populationMood": 0.1,
                 "economy": 0,
                 "rateOfQuarantining": 0,
                 "healthSystemCapacity": 0
@@ -549,9 +549,9 @@
         "choice": {
             "text": "Hmpf",
             "effect": {
-                "populationMood": 0.01,
-                "economy": 0.01,
-                "rateOfQuarantining": 0.01,
+                "populationMood": 0.1,
+                "economy": 0.1,
+                "rateOfQuarantining": 0.1,
                 "healthSystemCapacity": 0
             }
         }
@@ -562,8 +562,8 @@
         "choice": {
             "text": "Hmpf",
             "effect": {
-                "populationMood": -0.01,
-                "economy": -0.1,
+                "populationMood": -0.1,
+                "economy": -0.3,
                 "rateOfQuarantining": 0,
                 "healthSystemCapacity": 0
             }
@@ -575,8 +575,8 @@
         "choice": {
             "text": "Hmpf",
             "effect": {
-                "populationMood": -0.01,
-                "economy": -0.1,
+                "populationMood": -0.1,
+                "economy": -0.3,
                 "rateOfQuarantining": 0,
                 "healthSystemCapacity": 0
             }
@@ -588,9 +588,9 @@
         "choice": {
             "text": "Hmpf",
             "effect": {
-                "populationMood": -0.01,
+                "populationMood": -0.1,
                 "economy": 0,
-                "rateOfQuarantining": 0.01,
+                "rateOfQuarantining": 0.1,
                 "healthSystemCapacity": 0
             }
         }
@@ -601,7 +601,7 @@
         "choice": {
             "text": "Hmpf",
             "effect": {
-                "populationMood": 0.1,
+                "populationMood": 0.3,
                 "economy": 0,
                 "rateOfQuarantining": 0,
                 "healthSystemCapacity": 0
@@ -614,9 +614,9 @@
         "choice": {
             "text": "Hmpf",
             "effect": {
-                "populationMood": 0.01,
-                "economy": 0.01,
-                "rateOfQuarantining": -0.01,
+                "populationMood": 0.1,
+                "economy": 0.1,
+                "rateOfQuarantining": -0.1,
                 "healthSystemCapacity": 0
             }
         }
@@ -629,7 +629,7 @@
             "effect": {
                 "populationMood": 0,
                 "economy": 0,
-                "rateOfQuarantining": -0.1,
+                "rateOfQuarantining": -0.3,
                 "healthSystemCapacity": 0
             }
         }
@@ -637,19 +637,6 @@
     {
         "type": "Event",
         "text": "Mehrwegflaschen fehlen bei der Produktion",
-        "choice": {
-            "text": "Hmpf",
-            "effect": {
-                "populationMood": -0.01,
-                "economy": 0,
-                "rateOfQuarantining": 0,
-                "healthSystemCapacity": 0
-            }
-        }
-    },
-    {
-        "type": "Event",
-        "text": "Hopfenernte fällt aus, Bier wird knapp ->",
         "choice": {
             "text": "Hmpf",
             "effect": {
@@ -662,11 +649,24 @@
     },
     {
         "type": "Event",
+        "text": "Hopfenernte fällt aus, Bier wird knapp ->",
+        "choice": {
+            "text": "Hmpf",
+            "effect": {
+                "populationMood": -0.3,
+                "economy": 0,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Event",
         "text": "Aufgrund der wirtschaftlichen Rezession sinkt die CO² Bilanz deutlich. \nDie gesteckten Klimaziele scheinen wieder erreichbar. ",
         "choice": {
             "text": "Hmpf",
             "effect": {
-                "populationMood": 0.1,
+                "populationMood": 0.3,
                 "economy": 0,
                 "rateOfQuarantining": 0,
                 "healthSystemCapacity": 0
@@ -679,7 +679,7 @@
         "choice": {
             "text": "Hmpf",
             "effect": {
-                "populationMood": 0.01,
+                "populationMood": 0.1,
                 "economy": 0,
                 "rateOfQuarantining": 0,
                 "healthSystemCapacity": 0
@@ -692,7 +692,7 @@
         "choice": {
             "text": "Hmpf",
             "effect": {
-                "populationMood": -0.01,
+                "populationMood": -0.1,
                 "economy": 0,
                 "rateOfQuarantining": 0,
                 "healthSystemCapacity": 0
