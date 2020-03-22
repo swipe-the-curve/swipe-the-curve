@@ -79,27 +79,60 @@ export class Game {
 
 export class GameState {
 
-    public populationMood = 0.8;
-    public economy = 0.8;
+    private _populationMood = 0.8;
+    private _economy = 0.8;
     public currentCard: Card | undefined = undefined;
 
     constructor(
         public readonly infectionState: InfectionState,
         public readonly country: Country
-    ) {
+    ) { }
+
+    get populationMood(): number {
+        return this._populationMood;
+    }
+
+    set populationMood(populationMood: number) {
+        this._populationMood = clamp(populationMood, 0, 1);
+    }
+
+    get economy(): number {
+        return this._economy;
+    }
+
+    set economy(economy: number) {
+        this._economy = clamp(economy, 0, 1);
     }
 
 }
 
 export class InfectionState {
 
-    public rateOfQuarantining = 0;
+    private _rateOfQuarantining = 0;
+    private _healthcareSystemCapacity: number;
 
     constructor(
         private country: Country,
         public disease: Disease,
-        public healthcareSystemCapacity: number
+        healthcareSystemCapacity: number
     ) {
+        this._healthcareSystemCapacity = healthcareSystemCapacity;
+    }
+
+    public get rateOfQuarantining() : number {
+        return this._rateOfQuarantining
+    }
+
+    public set rateOfQuarantining(rateOfQuarantining: number) {
+        this._rateOfQuarantining = clamp(rateOfQuarantining, 0, 1);
+    }
+
+    public get healthcareSystemCapacity() : number {
+        return this._healthcareSystemCapacity
+    }
+
+    public set healthcareSystemCapacity(healthcareSystemCapacity: number) {
+        this._healthcareSystemCapacity = clamp(healthcareSystemCapacity, 0, 1);
     }
 
     public rateOfDeath(currentEpidemicState: EpidemicState): number {
@@ -126,4 +159,9 @@ export class InfectionState {
 
 export interface StateListener {
     (): void;
+}
+
+
+function clamp(value: number, min: number, max: number): number {
+    return Math.min(Math.max(value, min), max);
 }
