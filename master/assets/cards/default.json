@@ -185,14 +185,14 @@
     },
     {
         "type": "Selection",
-        "text": "Es werden vermehrt ausländische Hamsterkäufer beanstandet.",
+        "text": "Es werden vermehrt ausländische Hamsterkäufe beanstandet.",
         "id": "A9",
         "leftChoice": {
             "text": "Du lässt die Grenzen schließen",
             "effect": {
                 "populationMood": 0.05,
-                "economy": -0.01,
-                "rateOfQuarantining": -0.001,
+                "economy": -0.075,
+                "rateOfQuarantining": 0.05,
                 "healthSystemCapacity": 0
             }
         },
@@ -200,8 +200,8 @@
             "text": "Du wartest ab",
             "effect": {
                 "populationMood": -0.02,
-                "economy": 0,
-                "rateOfQuarantining": 0,
+                "economy": 0.05,
+                "rateOfQuarantining": -0.05,
                 "healthSystemCapacity": 0
             }
         }
@@ -225,29 +225,6 @@
                 "populationMood": -0.1,
                 "economy": 0,
                 "rateOfQuarantining": 0,
-                "healthSystemCapacity": 0
-            }
-        }
-    },
-    {
-        "type": "Selection",
-        "text": "Obwohl das Missachten der Ausgangssperren mit Geldstrafen geandet wird (500€ pro Verstoß), wird sie von einigen Bürgern weiter missachtet.",
-        "id": "A11",
-        "leftChoice": {
-            "text": "Geldstrafe auf 25.000€ erhöhen",
-            "effect": {
-                "populationMood": -0.05,
-                "economy": 0,
-                "rateOfQuarantining": 0.1,
-                "healthSystemCapacity": 0
-            }
-        },
-        "rightChoice": {
-            "text": "Freiheitsstrafen verhängen (4 Wochen)",
-            "effect": {
-                "populationMood": -0.1,
-                "economy": 0,
-                "rateOfQuarantining": 0.2,
                 "healthSystemCapacity": 0
             }
         }
@@ -300,7 +277,7 @@
     },
     {
         "type": "Selection",
-        "text": "Die Ausgangssperre wird nicht eingehalten.",
+        "text": "Die Ausgangssperre wird immer noch von einem Großteil der Bevölkerung nicht eingehalten.",
         "id": "A14",
         "leftChoice": {
             "text": "Weiter ans Volk appellieren",
@@ -326,7 +303,7 @@
         "text": "Die Ausgangssperre wird nicht eingehalten.",
         "id": "A15",
         "leftChoice": {
-            "text": "Freiheits- und Geldstrafen verhängen",
+            "text": "Freiheitsstrafen verhängen und Geldstrafen auf bis zu 25.000€ erhöhen",
             "effect": {
                 "populationMood": 0,
                 "economy": 0,
@@ -372,11 +349,11 @@
         "text": "Falschinformationen und Kritik an den Maßnahmen werden über das Internet verbreitet und führen zu mehr Infektionen und schlechter Stimmung.",
         "id": "A17",
         "leftChoice": {
-            "text": "Ab sofort Inhalte im Internet zensieren",
+            "text": "Dienstanbieter verpflichen Falschinformationen offline zu nehmen (NetzDG)",
             "effect": {
-                "populationMood": -0.2,
+                "populationMood": -0.1,
                 "economy": 0,
-                "rateOfQuarantining": 0.2,
+                "rateOfQuarantining": 0.05,
                 "healthSystemCapacity": 0
             }
         },
@@ -384,8 +361,8 @@
             "text": "Mehr Ressourcen zur Aufklärung mobilisieren",
             "effect": {
                 "populationMood": -0.1,
-                "economy": 0,
-                "rateOfQuarantining": 0,
+                "economy": -0.02,
+                "rateOfQuarantining": 0.01,
                 "healthSystemCapacity": 0
             }
         }
@@ -420,9 +397,9 @@
         "leftChoice": {
             "text": "Die Bevölkerung sensibilisieren",
             "effect": {
-                "populationMood": 0,
+                "populationMood": 0.1,
                 "economy": 0,
-                "rateOfQuarantining": 0,
+                "rateOfQuarantining": -0.1,
                 "healthSystemCapacity": 0
             }
         },
@@ -467,8 +444,8 @@
             "text": "Forschung finanziell unterstützen",
             "effect": {
                 "populationMood": 0.1,
-                "economy": 0.1,
-                "rateOfQuarantining": 0,
+                "economy": -0.01,
+                "rateOfQuarantining": 0.1,
                 "healthSystemCapacity": 0
             }
         },
@@ -477,14 +454,14 @@
             "effect": {
                 "populationMood": 0,
                 "economy": 0,
-                "rateOfQuarantining": 0,
+                "rateOfQuarantining": -0.1,
                 "healthSystemCapacity": 0
             }
         }
     },
     {
         "type": "Selection",
-        "text": "Dich erreichen Hilferufe ausländischer Regierunge (Spende von Gütern, Fachpersonal).",
+        "text": "Dich erreichen Hilferufe ausländischer Regierungen (Spende von Gütern, Fachpersonal).",
         "id": "A22",
         "leftChoice": {
             "text": "Du sendest Hilfe",
@@ -496,7 +473,7 @@
             }
         },
         "rightChoice": {
-            "text": "Du verweigester Hilfe",
+            "text": "Du verweigerst Hilfe",
             "effect": {
                 "populationMood": 0,
                 "economy": 0,
@@ -530,10 +507,10 @@
     },
     {
         "type": "Selection",
-        "text": "In den Gaststätten darf nur noch mit Mindestabstand gegessen werden. \nDieser wird nicht überall eingehalten.",
+        "text": "In den Gaststätten treffen sich viele Menschen zum geselligen Miteinander. Das beschleunigt die Verbreitung des Virus.",
         "id": "A24",
         "leftChoice": {
-            "text": "Du schließt alle Gaststätten",
+            "text": "Du schließt alle Gaststätten, Außerhausverkauf ist weiterhin erlaubt",
             "effect": {
                 "populationMood": -0.05,
                 "economy": -0.1,
@@ -542,11 +519,11 @@
             }
         },
         "rightChoice": {
-            "text": "Du machst nichts",
+            "text": "Essen nur noch mit Mindestabstand erlauben",
             "effect": {
-                "populationMood": 0,
-                "economy": 0,
-                "rateOfQuarantining": 0,
+                "populationMood": -0.01,
+                "economy": -0.05,
+                "rateOfQuarantining": 0.01,
                 "healthSystemCapacity": 0
             }
         }
@@ -558,7 +535,7 @@
         "leftChoice": {
             "text": "Du lässt Universitäten schließen",
             "effect": {
-                "populationMood": -0.05,
+                "populationMood": 0.1,
                 "economy": 0,
                 "rateOfQuarantining": 0.02,
                 "healthSystemCapacity": 0
@@ -569,29 +546,29 @@
             "effect": {
                 "populationMood": 0,
                 "economy": 0,
-                "rateOfQuarantining": 0,
+                "rateOfQuarantining": -0.02,
                 "healthSystemCapacity": 0
             }
         }
     },
     {
         "type": "Selection",
-        "text": "Schulen und Kindergärten sollen geschlossen werden. Allerdings setzen Elternteile auf die Betreuung der Kinder.",
+        "text": "Schulen und Kindergärten werden geschlossen. Allerdings setzen Elternteile auf die Betreuung der Kinder.",
         "id": "A26",
         "leftChoice": {
-            "text": "Schulen schließen und Notfallbetreuung für wichtige Fälle einrichten",
+            "text": "Notfallbetreuung für wichtige Fälle einrichten",
             "effect": {
-                "populationMood": 0,
+                "populationMood": 0.05,
                 "economy": -0.05,
                 "rateOfQuarantining": 0.02,
                 "healthSystemCapacity": 0
             }
         },
         "rightChoice": {
-            "text": "Schulen schließen ohne Betreuungsangebot",
+            "text": "Kein Betreuungsangebot einrichten",
             "effect": {
                 "populationMood": -0.05,
-                "economy": 0,
+                "economy": -0.05,
                 "rateOfQuarantining": 0.02,
                 "healthSystemCapacity": 0
             }
@@ -682,7 +659,7 @@
         "rightChoice": {
             "text": "Erstmal abwarten, die Kinder müssen ja auch betreut werden",
             "effect": {
-                "populationMood": -0.15,
+                "populationMood": 0.1,
                 "economy": 0,
                 "rateOfQuarantining": -0.15,
                 "healthSystemCapacity": 0
@@ -707,7 +684,7 @@
             "effect": {
                 "populationMood": 0,
                 "economy": 0,
-                "rateOfQuarantining": -0.4,
+                "rateOfQuarantining": -0.3,
                 "healthSystemCapacity": 0
             }
         }
@@ -735,7 +712,7 @@
             "effect": {
                 "populationMood": 0,
                 "economy": 0,
-                "rateOfQuarantining": -0.01,
+                "rateOfQuarantining": 0,
                 "healthSystemCapacity": 0
             }
         }
@@ -994,7 +971,7 @@
     },
     {
         "type": "Event",
-        "text": "Die Todesfälle nehmen weiter zu.",
+        "text": "Die Todesrate steigt aufgrund der Überlastung des Gesundheitssystems.",
         "id": "E20",
         "choice": {
             "text": "Furchtbar!",
@@ -1064,7 +1041,7 @@
     },
     {
         "type": "Event",
-        "text": "Obwohl du Quarantäne angeordnet hast, infizieren sich immer mehr Leute mit dem Virus",
+        "text": "Obwohl du Quarantäne angeordnet hast, infizieren sich immer mehr Leute mit dem Virus.",
         "id": "E34",
         "choice": {
             "text": "Reichen die Maßnahmen?",
@@ -1072,6 +1049,34 @@
                 "populationMood": -0.1,
                 "economy": 0,
                 "rateOfQuarantining": -0.2,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Event",
+        "text": "Corona Tests werden ab jetzt von der Krankenkasse gezahlt.",
+        "id": "E35",
+        "choice": {
+            "text": "Hmpf",
+            "effect": {
+                "populationMood": 0.1,
+                "economy": -0.1,
+                "rateOfQuarantining": 0.1,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Event",
+        "text": "Die Infektionsrate im Ursprungsland sinkt.",
+        "id": "E36",
+        "choice": {
+            "text": "Hmpf",
+            "effect": {
+                "populationMood": 0.05,
+                "economy": 0,
+                "rateOfQuarantining": 0,
                 "healthSystemCapacity": 0
             }
         }
