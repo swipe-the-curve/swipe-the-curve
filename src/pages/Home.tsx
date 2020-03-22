@@ -31,8 +31,8 @@ const Home: React.FC = () => {
           </IonRow>
           <IonRow className="resource-container">
             <IonCol>
-              <svg xmlns='http://www.w3.org/2000/svg' width='3vh' height='3vh' viewBox='0 0 24 24'>
-                <title>Heart</title>
+              <svg xmlns='http://www.w3.org/2000/svg' height='20%' viewBox='0 0 24 24'>
+                <title>Health</title>
                 <defs>
                   <linearGradient id="progressHeart" x1="0" y1="1" x2="0" y2="0">
                     <stop id="stop1Heart" offset={heartLevel} stopColor="red" />
@@ -47,8 +47,8 @@ const Home: React.FC = () => {
               </svg>
             </IonCol>
             <IonCol>
-              <svg xmlns='http://www.w3.org/2000/svg' width='4vh' height='4vh' viewBox='0 0 512 512'>
-                <title>People</title>
+              <svg xmlns='http://www.w3.org/2000/svg' height='20%' viewBox='0 0 512 512'>
+                <title>Mood</title>
                 <defs>
                   <linearGradient id="progressPeople" x1="0" y1="1" x2="0" y2="0">
                     <stop id="stop1People" offset={feelLevel} stopColor="lightblue" />
@@ -62,7 +62,7 @@ const Home: React.FC = () => {
               </svg>
             </IonCol>
             <IonCol>
-              <svg xmlns='http://www.w3.org/2000/svg' width='4vh' height='4vh' viewBox='0 0 512 512'>
+              <svg xmlns='http://www.w3.org/2000/svg' height='20%' viewBox='0 0 512 512'>
                 <title>Wealth</title>
                 <defs>
                   <linearGradient id="progressWealth" x1="0" y1="1" x2="0" y2="0">

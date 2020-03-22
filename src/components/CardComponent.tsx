@@ -6,11 +6,12 @@ interface CardProps {
     card: Card | undefined
 }
 const CardComponent: React.FunctionComponent<CardProps> = (props) => {
-    return (<div className="card shadow">
+    return (
+        <div className="card shadow">
         {props.card && props.card.id !== "E0" && props.card instanceof EventCard &&
             <div className="eventtitle">Ereignis:</div>
         }
-        {props.card && props.card.text}
+        {(props.card && props.card.text.length < 80 && props.card.text) || <div className="longtext">{props.card && props.card.text}</div>}
     </div>
     );
 };

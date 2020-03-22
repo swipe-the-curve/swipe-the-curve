@@ -3,7 +3,6 @@ import { SelectionCard, Card, EventCard, Choice, ChoiceEffect } from '../core/do
 import { Swipeable, direction } from 'react-deck-swiper';
 import CardComponent from './CardComponent';
 import { game } from '../core';
-import { IonRow, IonCol, IonButton, IonGrid } from '@ionic/react';
 
 const CardsComponent: React.FunctionComponent = () => {
 
