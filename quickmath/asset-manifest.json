@@ -13,8 +13,8 @@
     "static/js/5.6bef308d.chunk.js": "https://swipe-the-curve.github.io/swipe-the-curve/quickmath/static/js/5.6bef308d.chunk.js",
     "static/js/5.6bef308d.chunk.js.map": "https://swipe-the-curve.github.io/swipe-the-curve/quickmath/static/js/5.6bef308d.chunk.js.map",
     "main.css": "https://swipe-the-curve.github.io/swipe-the-curve/quickmath/static/css/main.2540d56e.chunk.css",
-    "main.js": "https://swipe-the-curve.github.io/swipe-the-curve/quickmath/static/js/main.3733c308.chunk.js",
-    "main.js.map": "https://swipe-the-curve.github.io/swipe-the-curve/quickmath/static/js/main.3733c308.chunk.js.map",
+    "main.js": "https://swipe-the-curve.github.io/swipe-the-curve/quickmath/static/js/main.37021b45.chunk.js",
+    "main.js.map": "https://swipe-the-curve.github.io/swipe-the-curve/quickmath/static/js/main.37021b45.chunk.js.map",
     "runtime-main.js": "https://swipe-the-curve.github.io/swipe-the-curve/quickmath/static/js/runtime-main.e14e96ca.js",
     "runtime-main.js.map": "https://swipe-the-curve.github.io/swipe-the-curve/quickmath/static/js/runtime-main.e14e96ca.js.map",
     "static/css/8.1594e46e.chunk.css": "https://swipe-the-curve.github.io/swipe-the-curve/quickmath/static/css/8.1594e46e.chunk.css",
@@ -193,7 +193,7 @@
     "static/js/94.91393d01.chunk.js": "https://swipe-the-curve.github.io/swipe-the-curve/quickmath/static/js/94.91393d01.chunk.js",
     "static/js/94.91393d01.chunk.js.map": "https://swipe-the-curve.github.io/swipe-the-curve/quickmath/static/js/94.91393d01.chunk.js.map",
     "index.html": "https://swipe-the-curve.github.io/swipe-the-curve/quickmath/index.html",
-    "precache-manifest.ccdfba60f2bd55f6803532d9a57ec085.js": "https://swipe-the-curve.github.io/swipe-the-curve/quickmath/precache-manifest.ccdfba60f2bd55f6803532d9a57ec085.js",
+    "precache-manifest.fda9afa5ac692837403b1706cdacc2c8.js": "https://swipe-the-curve.github.io/swipe-the-curve/quickmath/precache-manifest.fda9afa5ac692837403b1706cdacc2c8.js",
     "service-worker.js": "https://swipe-the-curve.github.io/swipe-the-curve/quickmath/service-worker.js",
     "static/css/8.1594e46e.chunk.css.map": "https://swipe-the-curve.github.io/swipe-the-curve/quickmath/static/css/8.1594e46e.chunk.css.map",
     "static/css/main.2540d56e.chunk.css.map": "https://swipe-the-curve.github.io/swipe-the-curve/quickmath/static/css/main.2540d56e.chunk.css.map",
@@ -209,6 +209,6 @@
     "static/css/8.1594e46e.chunk.css",
     "static/js/8.5dcd2f72.chunk.js",
     "static/css/main.2540d56e.chunk.css",
-    "static/js/main.3733c308.chunk.js"
+    "static/js/main.37021b45.chunk.js"
   ]
 }
