@@ -43,7 +43,9 @@ const mapStates = (epidemicStates: EpidemicState[]) => {
 }
 
 const Curve: React.FC = () => {
-  const [epidemicState, setEpidemicState] = useState(mapStates(game.epidemicStates));
+  const mappedEpidemicState = mapStates(game.epidemicStates);
+  console.log(mappedEpidemicState);
+  const [epidemicState, setEpidemicState] = useState(mappedEpidemicState);
 
   useEffect(() => {
     console.log("addEventlistener");

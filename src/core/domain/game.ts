@@ -24,6 +24,8 @@ export class Game {
         });
         this.gameState = new GameState(new InfectionState(country, disease, 0.0004), country)
         this.model = new EpidemicModel(0, country.population)
+        // TODO set this later if we want to go through some cards without any infections in our country
+        this.model.infected = 1
         this.epidemicStates = [new EpidemicState(0, 0, 0)]
         this.stateListeners = []
     }
