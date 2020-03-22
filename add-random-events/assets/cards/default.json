@@ -1,0 +1,1084 @@
+[
+    {
+        "type": "Selection",
+        "text": "Auf der anderen Seite der Welt ist eine bisher unbekannte Krankheit aufgetreten, die sich ungewöhnlich schnell verbreitet.",
+        "id": "A1",
+        "leftChoice": {
+            "text": "Informationen unter Verschluss halten",
+            "effect": {
+                "populationMood": 0,
+                "economy": 0,
+                "rateOfQuarantining": -0.01,
+                "healthSystemCapacity": 0
+            }
+        },
+        "rightChoice": {
+            "text": "Bevölkerung informieren",
+            "effect": {
+                "populationMood": -0.01,
+                "economy": -0.01,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Selection",
+        "text": "Deutsche Touristen sind überall auf der Welt verstreut und können wegen geschlossener Grenzen nicht mehr regulär zurückreisen. ",
+        "id": "A2",
+        "leftChoice": {
+            "text": "Du lässt sie auf Staatskosten einfliegen",
+            "effect": {
+                "populationMood": 0.1,
+                "economy": 0,
+                "rateOfQuarantining": -0.05,
+                "healthSystemCapacity": 0
+            }
+        },
+        "rightChoice": {
+            "text": "Du wartest ab",
+            "effect": {
+                "populationMood": -0.05,
+                "economy": 0,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Selection",
+        "text": "Du hast an die Bevölkerung appelliert, damit sie zuhause bleibt. Leider sind noch einige Menschen in Gruppen unterwegs.",
+        "id": "A3",
+        "leftChoice": {
+            "text": "Eine Ausgangssperre in Kraft setzten",
+            "effect": {
+                "populationMood": -0.3,
+                "economy": -0.2,
+                "rateOfQuarantining": 0.4,
+                "healthSystemCapacity": 0
+            }
+        },
+        "rightChoice": {
+            "text": "Weiter appellieren",
+            "effect": {
+                "populationMood": 0.01,
+                "economy": 0,
+                "rateOfQuarantining": -0.1,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Selection",
+        "text": "Den ersten Unternehmen droht die Insolvenz. Wie reagierst du?",
+        "id": "A4",
+        "leftChoice": {
+            "text": "Ein Rettungspaket verabschieden",
+            "effect": {
+                "populationMood": 0.15,
+                "economy": 0.2,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        },
+        "rightChoice": {
+            "text": "Du wartest ab",
+            "effect": {
+                "populationMood": -0.1,
+                "economy": -0.1,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Selection",
+        "text": "Noch viele Leute gehen gerne zum Friseur.",
+        "id": "A5",
+        "leftChoice": {
+            "text": "Du schließt Friseurläden",
+            "effect": {
+                "populationMood": 0,
+                "economy": -0.05,
+                "rateOfQuarantining": 0.02,
+                "healthSystemCapacity": 0
+            }
+        },
+        "rightChoice": {
+            "text": "Du wartest ab",
+            "effect": {
+                "populationMood": 0,
+                "economy": 0.01,
+                "rateOfQuarantining": -0.01,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Selection",
+        "text": "Viele Bürger beschäftigen sich mit handwerklichen Tätigkeiten, die Infektionsrate ist weiterhin hoch.",
+        "id": "A6",
+        "leftChoice": {
+            "text": "Du schließt Baumärkte",
+            "effect": {
+                "populationMood": -0.1,
+                "economy": -0.05,
+                "rateOfQuarantining": 0.02,
+                "healthSystemCapacity": 0
+            }
+        },
+        "rightChoice": {
+            "text": "Du wartest ab",
+            "effect": {
+                "populationMood": 0.05,
+                "economy": 0.05,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Selection",
+        "text": "Das Gesundheitssystem in den Nachbarstaaten stößt an seine Grenzen, dein Gesundheitssystem hat noch freie Kapazität.",
+        "id": "A7",
+        "leftChoice": {
+            "text": "Du beschließt, Kranke einfliegen zu lassen und in deinem Land zu behandeln",
+            "effect": {
+                "populationMood": -0.1,
+                "economy": 0,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": -0.1
+            }
+        },
+        "rightChoice": {
+            "text": "Du reagierst nicht",
+            "effect": {
+                "populationMood": 0,
+                "economy": 0,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Selection",
+        "text": "Die Infektionszahlen steigen weiterhin an.",
+        "id": "A8",
+        "leftChoice": {
+            "text": "Du schließt die Grenzen (auch für Warenverkehr) ",
+            "effect": {
+                "populationMood": -0.1,
+                "economy": -0.2,
+                "rateOfQuarantining": 0.02,
+                "healthSystemCapacity": 0
+            }
+        },
+        "rightChoice": {
+            "text": "Du belässt die Situation so",
+            "effect": {
+                "populationMood": 0,
+                "economy": 0,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Selection",
+        "text": "Es werden vermehrt ausländische Hamsterkäufe beanstandet.",
+        "id": "A9",
+        "leftChoice": {
+            "text": "Du lässt die Grenzen schließen",
+            "effect": {
+                "populationMood": 0.05,
+                "economy": -0.075,
+                "rateOfQuarantining": 0.05,
+                "healthSystemCapacity": 0
+            }
+        },
+        "rightChoice": {
+            "text": "Du wartest ab",
+            "effect": {
+                "populationMood": -0.02,
+                "economy": 0.05,
+                "rateOfQuarantining": -0.05,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Selection",
+        "text": "Einige Bürger lassen sich von der Ausgangsperre nicht beeindrucken und treffen sich weiter in Gruppen.",
+        "id": "A10",
+        "leftChoice": {
+            "text": "Du verhängst Geldstrafen",
+            "effect": {
+                "populationMood": 0,
+                "economy": 0,
+                "rateOfQuarantining": 0.1,
+                "healthSystemCapacity": 0
+            }
+        },
+        "rightChoice": {
+            "text": "Weiter an das Volk appellieren",
+            "effect": {
+                "populationMood": -0.1,
+                "economy": 0,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Selection",
+        "text": "Die erste Welle geheilter (und damit immuner) Coronapatienten wurde aus den Krankenhäusern entlassen.",
+        "id": "A12",
+        "leftChoice": {
+            "text": "Du zwingst sie zur Arbeit in wichtigen Bereichen (Krankenhäusern, Lebensmittelversorgung...)",
+            "effect": {
+                "populationMood": 0.1,
+                "economy": 0,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0.1
+            }
+        },
+        "rightChoice": {
+            "text": "Du tust nichts",
+            "effect": {
+                "populationMood": 0,
+                "economy": 0,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Selection",
+        "text": "In der Bevölkerung mehren sich die Privatinsolvenzen.",
+        "id": "A13",
+        "leftChoice": {
+            "text": "Du führst ein bedingungsloses Grundeinkommen ein",
+            "effect": {
+                "populationMood": 0.2,
+                "economy": 0.1,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        },
+        "rightChoice": {
+            "text": "Du reagierst nicht",
+            "effect": {
+                "populationMood": -0.1,
+                "economy": -0.1,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Selection",
+        "text": "Die Ausgangssperre wird immer noch von einem Großteil der Bevölkerung nicht eingehalten.",
+        "id": "A14",
+        "leftChoice": {
+            "text": "Weiter ans Volk appellieren",
+            "effect": {
+                "populationMood": 0,
+                "economy": 0.05,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        },
+        "rightChoice": {
+            "text": "Polizei einsetzen",
+            "effect": {
+                "populationMood": -0.01,
+                "economy": 0,
+                "rateOfQuarantining": 0.1,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Selection",
+        "text": "Die Ausgangssperre wird nicht eingehalten.",
+        "id": "A15",
+        "leftChoice": {
+            "text": "Freiheitsstrafen verhängen und Geldstrafen auf bis zu 25.000€ erhöhen",
+            "effect": {
+                "populationMood": 0,
+                "economy": 0,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        },
+        "rightChoice": {
+            "text": "Bundeswehr einsetzen",
+            "effect": {
+                "populationMood": -0.2,
+                "economy": 0,
+                "rateOfQuarantining": 0.1,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Selection",
+        "text": "Menschen beginnen aus Ländern mit schlechten Gesundheitssystemen zu fliehen und versuchen sich trotz geschlossener Grenzen in dein Land zu flüchten.",
+        "id": "A16",
+        "leftChoice": {
+            "text": "Die Grenzen bewachen, zur Not mit Gewalt",
+            "effect": {
+                "populationMood": -0.2,
+                "economy": 0,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        },
+        "rightChoice": {
+            "text": "Ein System zur kontrollierten Aufnahme von Flüchtlingen einführen",
+            "effect": {
+                "populationMood": -0.1,
+                "economy": 0,
+                "rateOfQuarantining": -0.2,
+                "healthSystemCapacity": -0.1
+            }
+        }
+    },
+    {
+        "type": "Selection",
+        "text": "Falschinformationen und Kritik an den Maßnahmen werden über das Internet verbreitet und führen zu mehr Infektionen und schlechter Stimmung.",
+        "id": "A17",
+        "leftChoice": {
+            "text": "Dienstanbieter verpflichen Falschinformationen offline zu nehmen (NetzDG)",
+            "effect": {
+                "populationMood": -0.1,
+                "economy": 0,
+                "rateOfQuarantining": 0.05,
+                "healthSystemCapacity": 0
+            }
+        },
+        "rightChoice": {
+            "text": "Mehr Ressourcen zur Aufklärung mobilisieren",
+            "effect": {
+                "populationMood": -0.1,
+                "economy": -0.02,
+                "rateOfQuarantining": 0.01,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Selection",
+        "text": "Da viele Menschen zu Hause bleiben müssen und ihre Einkünfte wegbrechen, gehen die Käufe stark zurück und Existenzen sind gefährdet.",
+        "id": "A18",
+        "leftChoice": {
+            "text": "Eine motivierende Ansprache an das Volk richten",
+            "effect": {
+                "populationMood": -0.1,
+                "economy": -0.1,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        },
+        "rightChoice": {
+            "text": "Jeder Person 1000€ im Monat geben",
+            "effect": {
+                "populationMood": 0.3,
+                "economy": 0.2,
+                "rateOfQuarantining": -0.3,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Selection",
+        "text": "Es wird beobachtet, dass die Sterblichkeit bei älteren Personen sehr hoch ist.",
+        "id": "A19",
+        "leftChoice": {
+            "text": "Die Bevölkerung sensibilisieren",
+            "effect": {
+                "populationMood": 0.1,
+                "economy": 0,
+                "rateOfQuarantining": -0.1,
+                "healthSystemCapacity": 0
+            }
+        },
+        "rightChoice": {
+            "text": "Den Zugang zu Altenheimen (u. Ä.) einschränken",
+            "effect": {
+                "populationMood": -0.1,
+                "economy": 0,
+                "rateOfQuarantining": 0.2,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Selection",
+        "text": "Aufgrund von Einbußen bei der Ernte, fehlt es an Lebensmitteln.",
+        "id": "A20",
+        "leftChoice": {
+            "text": "Du lässt die Lebensmittel rationieren",
+            "effect": {
+                "populationMood": 0.1,
+                "economy": 0,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        },
+        "rightChoice": {
+            "text": "Du machst nichts",
+            "effect": {
+                "populationMood": -0.1,
+                "economy": 0,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Selection",
+        "text": "Einzelne Unternehmen beginnen mit der Forschung neuer Impfstoffe.",
+        "id": "A21",
+        "leftChoice": {
+            "text": "Forschung finanziell unterstützen",
+            "effect": {
+                "populationMood": 0.1,
+                "economy": -0.01,
+                "rateOfQuarantining": 0.1,
+                "healthSystemCapacity": 0
+            }
+        },
+        "rightChoice": {
+            "text": "Vorerst abwarten",
+            "effect": {
+                "populationMood": 0,
+                "economy": 0,
+                "rateOfQuarantining": -0.1,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Selection",
+        "text": "Dich erreichen Hilferufe ausländischer Regierungen (Spende von Gütern, Fachpersonal).",
+        "id": "A22",
+        "leftChoice": {
+            "text": "Du sendest Hilfe",
+            "effect": {
+                "populationMood": -0.1,
+                "economy": 0,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": -0.1
+            }
+        },
+        "rightChoice": {
+            "text": "Du verweigerst Hilfe",
+            "effect": {
+                "populationMood": 0,
+                "economy": 0,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Selection",
+        "text": "Das Gesundheitssystem gerät an die Grenzen seiner Kapazität.",
+        "id": "A23",
+        "leftChoice": {
+            "text": "Du beschließt unkritische Arztpraxen (Zahnärzte, Augenärzte) zu schließen um die Kapazität zu erhöhen",
+            "effect": {
+                "populationMood": 0,
+                "economy": 0,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0.01
+            }
+        },
+        "rightChoice": {
+            "text": "Du machst nichts",
+            "effect": {
+                "populationMood": 0,
+                "economy": 0,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Selection",
+        "text": "In den Gaststätten treffen sich viele Menschen zum geselligen Miteinander. Das beschleunigt die Verbreitung des Virus.",
+        "id": "A24",
+        "leftChoice": {
+            "text": "Du schließt alle Gaststätten, Außerhausverkauf ist weiterhin erlaubt",
+            "effect": {
+                "populationMood": -0.05,
+                "economy": -0.1,
+                "rateOfQuarantining": 0.05,
+                "healthSystemCapacity": 0
+            }
+        },
+        "rightChoice": {
+            "text": "Essen nur noch mit Mindestabstand erlauben",
+            "effect": {
+                "populationMood": -0.01,
+                "economy": -0.05,
+                "rateOfQuarantining": 0.01,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Selection",
+        "text": "Die Infektionszahlen steigen weiter an.",
+        "id": "A25",
+        "leftChoice": {
+            "text": "Du lässt Universitäten schließen",
+            "effect": {
+                "populationMood": 0.1,
+                "economy": 0,
+                "rateOfQuarantining": 0.02,
+                "healthSystemCapacity": 0
+            }
+        },
+        "rightChoice": {
+            "text": "Du machst nichts",
+            "effect": {
+                "populationMood": 0,
+                "economy": 0,
+                "rateOfQuarantining": -0.02,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Selection",
+        "text": "Schulen und Kindergärten werden geschlossen. Allerdings setzen Elternteile auf die Betreuung der Kinder.",
+        "id": "A26",
+        "leftChoice": {
+            "text": "Notfallbetreuung für wichtige Fälle einrichten",
+            "effect": {
+                "populationMood": 0.05,
+                "economy": -0.05,
+                "rateOfQuarantining": 0.02,
+                "healthSystemCapacity": 0
+            }
+        },
+        "rightChoice": {
+            "text": "Kein Betreuungsangebot einrichten",
+            "effect": {
+                "populationMood": -0.05,
+                "economy": -0.05,
+                "rateOfQuarantining": 0.02,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Selection",
+        "text": "Die Kapazität an Krankenhausbetten ist überschritten.",
+        "id": "A27",
+        "leftChoice": {
+            "text": "Du lässt leere Schulgebäude als improvisierte Krankenhäuser nutzen",
+            "effect": {
+                "populationMood": 0,
+                "economy": 0,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0.01
+            }
+        },
+        "rightChoice": {
+            "text": "Du machst nichts",
+            "effect": {
+                "populationMood": 0,
+                "economy": 0,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Selection",
+        "text": "Die Ärzte halten der Belastung immer weniger stand.",
+        "id": "A28",
+        "leftChoice": {
+            "text": "Du erlaubst den Einsatz leistungssteigernder Substanzen ",
+            "effect": {
+                "populationMood": -0.1,
+                "economy": 0,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0.01
+            }
+        },
+        "rightChoice": {
+            "text": "Du machst nichts",
+            "effect": {
+                "populationMood": 0,
+                "economy": 0,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0.1
+            }
+        }
+    },
+    {
+        "type": "Selection",
+        "text": "Es gibt eine übersichtliche Anzahl von Infektionen, deren direkte Kontakte ermittelt werden können. ",
+        "id": "A31",
+        "leftChoice": {
+            "text": "Du versuchst alle Infizierten und Kontakte unter Quarantäne zu stellen",
+            "effect": {
+                "populationMood": 0,
+                "economy": 0,
+                "rateOfQuarantining": 0.05,
+                "healthSystemCapacity": 0
+            }
+        },
+        "rightChoice": {
+            "text": "Du machst nichts",
+            "effect": {
+                "populationMood": 0,
+                "economy": 0,
+                "rateOfQuarantining": -0.2,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Selection",
+        "text": "Die Infektionen steigen weiter an. Einige Experten fordern Schulen und Kindergärten zu schließen, da Kinder häufig asymptomatische Krankheitsverläufe haben.",
+        "id": "A32",
+        "leftChoice": {
+            "text": "Schulen und Kindergärten schließen",
+            "effect": {
+                "populationMood": -0.15,
+                "economy": -0.15,
+                "rateOfQuarantining": 0.15,
+                "healthSystemCapacity": 0
+            }
+        },
+        "rightChoice": {
+            "text": "Erstmal abwarten, die Kinder müssen ja auch betreut werden",
+            "effect": {
+                "populationMood": 0.1,
+                "economy": 0,
+                "rateOfQuarantining": -0.15,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Selection",
+        "text": "Die Urlaubsaison geht zu Ende. Viele Leute kommen aus ihrem Auslandsurlaub zurück.",
+        "id": "A33",
+        "leftChoice": {
+            "text": "Einreisende aus Krisenregionen in 14 tägige Quarantäne stecken",
+            "effect": {
+                "populationMood": -0.2,
+                "economy": -0.1,
+                "rateOfQuarantining": 0.1,
+                "healthSystemCapacity": 0
+            }
+        },
+        "rightChoice": {
+            "text": "nichts machen",
+            "effect": {
+                "populationMood": 0,
+                "economy": 0,
+                "rateOfQuarantining": -0.3,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Event",
+        "text": "DISCLAIMER: Dies ist ein Spiel basierend auf gefährlichem Halbwissen und keinesfalls eine realistische Simulation der aktuellen Situation und vergangener oder zukünftiger Entscheidungen.",
+        "id": "E0",
+        "choice": {
+            "text": "Ich verstehe",
+            "effect": {
+                "populationMood": 0,
+                "economy": 0,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Event",
+        "text": "Der erste Fall des Coronavirus ist in Deutschland aufgetreten.",
+        "id": "E1",
+        "choice": {
+            "text": "Zum Glück bisher nur einer",
+            "effect": {
+                "populationMood": 0,
+                "economy": 0,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Event",
+        "text": "In einer Kleinstadt, von der vorher noch niemand gehört hat, findet eine Party statt. Die Gäste infizieren sich untereinander.",
+        "id": "E2",
+        "choice": {
+            "text": "Es wird versucht, die Infektionsketten nachzuvollziehen",
+            "effect": {
+                "populationMood": 0,
+                "economy": 0,
+                "rateOfQuarantining": -0.1,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Event",
+        "text": "Bilder aus Bürgerkriegsregionen in Afrika verbreiten sich.",
+        "id": "E3",
+        "choice": {
+            "text": "Wir haben hier mit der Rückverfolgung auch etwas zu tun",
+            "effect": {
+                "populationMood": -0.2,
+                "economy": -0.1,
+                "rateOfQuarantining": 0.2,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Event",
+        "text": "Ein vermeintlich vielversprechender Impfstoff ist doch wirkungslos.",
+        "id": "E4",
+        "choice": {
+            "text": "Es muss weiterhin geforscht werden",
+            "effect": {
+                "populationMood": -0.2,
+                "economy": 0,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Event",
+        "text": "Die Reichsbürgerbewegung versucht zu putschen.",
+        "id": "E5",
+        "choice": {
+            "text": "Oh Neee",
+            "effect": {
+                "populationMood": -0.1,
+                "economy": 0,
+                "rateOfQuarantining": -0.1,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Event",
+        "text": "Erste Corona-Überlebende melden sich, um in Schlüsselpositionen zu arbeiten.",
+        "id": "E6",
+        "choice": {
+            "text": "Jede Erfahrung zählt",
+            "effect": {
+                "populationMood": 0.1,
+                "economy": 0,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0.1
+            }
+        }
+    },
+    {
+        "type": "Event",
+        "text": "Die Kurse an der Börse brechen ein, die private Altersvorsorge von Millionen Deutschen ist vernichtet.",
+        "id": "E7",
+        "choice": {
+            "text": "Aktien verkaufen",
+            "effect": {
+                "populationMood": -0.2,
+                "economy": -0.1,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Event",
+        "text": "Künstler veranstalten Streaming-Konzerte.",
+        "id": "E8",
+        "choice": {
+            "text": "Weiter dazu motivieren",
+            "effect": {
+                "populationMood": 0.1,
+                "economy": 0,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Event",
+        "text": "Nach einem Hackathon kann Hilfe unter Bürgern besser koordiniert werden.",
+        "id": "E9",
+        "choice": {
+            "text": "Neuentwickelte App flächendeckend einsetzen",
+            "effect": {
+                "populationMood": 0.1,
+                "economy": 0.1,
+                "rateOfQuarantining": 0.1,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Event",
+        "text": "Die Banken vergeben keine Kredite mehr.",
+        "id": "E10",
+        "choice": {
+            "text": "Insolvenzfrist ausweiten",
+            "effect": {
+                "populationMood": -0.1,
+                "economy": -0.2,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Event",
+        "text": "Die Menschen stürmen die Banken und heben all ihre Ersparnisse ab.",
+        "id": "E11",
+        "choice": {
+            "text": "Einlagensicherung der Bevölkerung kommunizieren.",
+            "effect": {
+                "populationMood": -0.1,
+                "economy": -0.2,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Event",
+        "text": "Der Vorrat an Sicherheitskleidung geht zuneige. Einzelne Ärzte infizieren sich und fallen aus.",
+        "id": "E12",
+        "choice": {
+            "text": "Studenten und Ärzte aus dem Ruhestand rekrutieren",
+            "effect": {
+                "populationMood": -0.1,
+                "economy": 0,
+                "rateOfQuarantining": 0.1,
+                "healthSystemCapacity": -0.1
+            }
+        }
+    },
+    {
+        "type": "Event",
+        "text": "Ärzte entwickeln Immunität.",
+        "id": "E13",
+        "choice": {
+            "text": "Ärzte wieder einsetzen und Pflegepersonal entlasten",
+            "effect": {
+                "populationMood": 0.2,
+                "economy": 0,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0.1
+            }
+        }
+    },
+    {
+        "type": "Event",
+        "text": "Gutes Wetter und mehr Freizeit durch Corona-Urlaub und Freistellungen führen zu mehr Menschen in Innenstädten und Parks.",
+        "id": "E14",
+        "choice": {
+            "text": "Nochmal ein Eis genießen",
+            "effect": {
+                "populationMood": 0.1,
+                "economy": 0.1,
+                "rateOfQuarantining": -0.1,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Event",
+        "text": "Die vielen Einschränken in der persönlichen Freiheit führen zu öffentlichen Protesten.",
+        "id": "E15",
+        "choice": {
+            "text": "Wir müssen an die Schwächeren denken",
+            "effect": {
+                "populationMood": 0,
+                "economy": 0,
+                "rateOfQuarantining": -0.2,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Event",
+        "text": "Menschen hamstern Lebensmittel, es fehlt an zurückgeführten Mehrwegflaschen für die Produktion.",
+        "id": "E16",
+        "choice": {
+            "text": "Sichere Versorgungskette kommunizieren",
+            "effect": {
+                "populationMood": -0.1,
+                "economy": -0.05,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Event",
+        "text": "In der Landwirtschaft fehlt es an Erntehelfer für  Spargel und Erdbeeren.",
+        "id": "E17",
+        "choice": {
+            "text": "Frewillige folgen dem Aufruf der Landwirte und unterstützen.",
+            "effect": {
+                "populationMood": -0.1,
+                "economy": 0.1,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Event",
+        "text": "Aufgrund der wirtschaftlichen Rezession sinkt die CO² Bilanz deutlich. \nDie gesteckten Klimaziele scheinen wieder erreichbar. ",
+        "id": "E18",
+        "choice": {
+            "text": "Einzelne Städte erreichen endlich wieder gesunde Luftwerte.",
+            "effect": {
+                "populationMood": 0.3,
+                "economy": 0,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Event",
+        "text": "Pornflix schenkt Nutzern die Premium Funktionen, um die Quarantäne attraktiver zu machen.",
+        "id": "E19",
+        "choice": {
+            "text": "Yeah!",
+            "effect": {
+                "populationMood": 0.3,
+                "economy": 0,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Event",
+        "text": "Die Todesrate steigt aufgrund der Überlastung des Gesundheitssystems.",
+        "id": "E20",
+        "choice": {
+            "text": "Furchtbar!",
+            "effect": {
+                "populationMood": -0.1,
+                "economy": 0,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Event",
+        "text": "Der Präsident eines anderen (großen) Landes behauptet öffentlich, dass das Virus nur ein Hoax sei und man das nicht ernst nehmen müsse.",
+        "id": "E21",
+        "choice": {
+            "text": "Zurücktwittern",
+            "effect": {
+                "populationMood": -0.1,
+                "economy": 0,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Event",
+        "text": "Ein Impfstoff ist entwickelt.",
+        "id": "E22",
+        "choice": {
+            "text": "Testphase vorbereiten",
+            "effect": {
+                "populationMood": 0.5,
+                "economy": 0.1,
+                "rateOfQuarantining": 0.7,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Event",
+        "text": "Eine Therapie ist entwickelt und schlägt bei 80%.",
+        "id": "E23",
+        "choice": {
+            "text": "Therapie einsetzen",
+            "effect": {
+                "populationMood": 0.5,
+                "economy": 0.1,
+                "rateOfQuarantining": 0.7,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Event",
+        "text": "Im Nachbarland steigt die Zahl der Infizierten in kürzester Zeit stark an. Das Gesundheitssystem ist kurz vor der Überlastung",
+        "id": "E33",
+        "choice": {
+            "text": "Vielleicht sollten Maßnahmen ergriffen werden?",
+            "effect": {
+                "populationMood": -0.1,
+                "economy": 0,
+                "rateOfQuarantining": -0.2,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Event",
+        "text": "Obwohl du Quarantäne angeordnet hast, infizieren sich immer mehr Leute mit dem Virus.",
+        "id": "E34",
+        "choice": {
+            "text": "Reichen die Maßnahmen?",
+            "effect": {
+                "populationMood": -0.1,
+                "economy": 0,
+                "rateOfQuarantining": -0.2,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Event",
+        "text": "Corona Tests werden ab jetzt von der Krankenkasse gezahlt.",
+        "id": "E35",
+        "choice": {
+            "text": "Hmpf",
+            "effect": {
+                "populationMood": 0.1,
+                "economy": -0.1,
+                "rateOfQuarantining": 0.1,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Event",
+        "text": "Die Infektionsrate im Ursprungsland sinkt.",
+        "id": "E36",
+        "choice": {
+            "text": "Hmpf",
+            "effect": {
+                "populationMood": 0.05,
+                "economy": 0,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        }
+    }
+]
