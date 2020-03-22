@@ -31,7 +31,7 @@
             "effect": {
                 "populationMood": 0.1,
                 "economy": 0,
-                "rateOfQuarantining": -0.05,
+                "rateOfQuarantining": -0.1,
                 "healthSystemCapacity": 0
             }
         },
@@ -98,7 +98,7 @@
         "leftChoice": {
             "text": "Du schließt Friseurläden",
             "effect": {
-                "populationMood": 0,
+                "populationMood": -0.01,
                 "economy": -0.05,
                 "rateOfQuarantining": 0.02,
                 "healthSystemCapacity": 0
@@ -146,7 +146,7 @@
             "effect": {
                 "populationMood": -0.1,
                 "economy": 0,
-                "rateOfQuarantining": 0,
+                "rateOfQuarantining": -0.1,
                 "healthSystemCapacity": -0.1
             }
         },
@@ -192,7 +192,7 @@
             "effect": {
                 "populationMood": 0.05,
                 "economy": -0.075,
-                "rateOfQuarantining": 0.05,
+                "rateOfQuarantining": 0.1,
                 "healthSystemCapacity": 0
             }
         },
@@ -213,7 +213,7 @@
         "leftChoice": {
             "text": "Du verhängst Geldstrafen",
             "effect": {
-                "populationMood": 0,
+                "populationMood": -0.1,
                 "economy": 0,
                 "rateOfQuarantining": 0.1,
                 "healthSystemCapacity": 0
@@ -222,9 +222,9 @@
         "rightChoice": {
             "text": "Weiter an das Volk appellieren",
             "effect": {
-                "populationMood": -0.1,
+                "populationMood": 0.1,
                 "economy": 0,
-                "rateOfQuarantining": 0,
+                "rateOfQuarantining": -0.05,
                 "healthSystemCapacity": 0
             }
         }
@@ -514,7 +514,7 @@
             "effect": {
                 "populationMood": -0.05,
                 "economy": -0.1,
-                "rateOfQuarantining": 0.05,
+                "rateOfQuarantining": 0.1,
                 "healthSystemCapacity": 0
             }
         },
@@ -537,7 +537,7 @@
             "effect": {
                 "populationMood": 0.1,
                 "economy": 0,
-                "rateOfQuarantining": 0.02,
+                "rateOfQuarantining": 0.1,
                 "healthSystemCapacity": 0
             }
         },
@@ -581,8 +581,8 @@
         "leftChoice": {
             "text": "Du lässt leere Schulgebäude als improvisierte Krankenhäuser nutzen",
             "effect": {
-                "populationMood": 0,
-                "economy": 0,
+                "populationMood": 0.1,
+                "economy": -0.1,
                 "rateOfQuarantining": 0,
                 "healthSystemCapacity": 0.01
             }
@@ -652,7 +652,7 @@
             "effect": {
                 "populationMood": -0.15,
                 "economy": -0.15,
-                "rateOfQuarantining": 0.15,
+                "rateOfQuarantining": 0.2,
                 "healthSystemCapacity": 0
             }
         },
@@ -675,7 +675,7 @@
             "effect": {
                 "populationMood": -0.2,
                 "economy": -0.1,
-                "rateOfQuarantining": 0.1,
+                "rateOfQuarantining": 0.3,
                 "healthSystemCapacity": 0
             }
         },
@@ -752,7 +752,7 @@
         "choice": {
             "text": "Es muss weiterhin geforscht werden",
             "effect": {
-                "populationMood": -0.2,
+                "populationMood": -0.1,
                 "economy": 0,
                 "rateOfQuarantining": 0,
                 "healthSystemCapacity": 0
@@ -775,12 +775,12 @@
     },
     {
         "type": "Event",
-        "text": "Erste Corona-Überlebende melden sich, um in Schlüsselpositionen zu arbeiten.",
+        "text": "Einige bereits genesene Patienten melden sich, um in Schlüsselpositionen zu arbeiten.",
         "id": "E6",
         "choice": {
             "text": "Jede Erfahrung zählt",
             "effect": {
-                "populationMood": 0.1,
+                "populationMood": 0.2,
                 "economy": 0,
                 "rateOfQuarantining": 0,
                 "healthSystemCapacity": 0.1
