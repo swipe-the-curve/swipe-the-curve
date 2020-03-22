@@ -52,17 +52,11 @@ export class Game {
                 this.cards = story.reverse().map(id => {
                     if (id.startsWith("?")) {
                         if (id.includes("E")) {
-                            console.log(randomEarly)
-                            let randomElement = this.getRandomCardFromEventList(randomEarly)
-                            console.log(randomElement)
-                            console.log(randomEarly)
-                            return cardsById[randomElement];
+                            return cardsById[this.getRandomCardFromEventList(randomEarly)];
                         } else if (id.includes("M")) {
-                            let randomElement = this.getRandomCardFromEventList(randomMid)
-                            return cardsById[randomElement];
+                            return cardsById[this.getRandomCardFromEventList(randomMid)];
                         } else if (id.includes("L")) {
-                            let randomElement = this.getRandomCardFromEventList(randomLate)
-                            return cardsById[randomElement];
+                            return cardsById[this.getRandomCardFromEventList(randomLate)];
                         } else {
                             return cardsById[id];
                         }
