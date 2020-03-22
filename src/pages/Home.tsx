@@ -16,7 +16,7 @@ const Home: React.FC = () => {
   useEffect(() => {
     console.log("addEventlistener");
     game.addStateListener(() => {
-      setHeartLevel(1); // TODO What is this?
+      setHeartLevel(game.gameState.healthCareSystem);
       setFeelLevel(game.gameState.populationMood);
       setWealthLevel(game.gameState.economy);
     });

@@ -54,10 +54,18 @@ export class Game {
             this.gameState.infectionState.rateOfImmunity
         )
         newEpidemicState.healthcareSystemCapacity = Math.floor(this.gameState.infectionState.healthcareSystemCapacity  * this.gameState.country.population)
+        if (newEpidemicState.infected < newEpidemicState.healthcareSystemCapacity) {
+            this.gameState.healthCareSystem = 1 - 0.5 * (newEpidemicState.infected / newEpidemicState.healthcareSystemCapacity)
+        } else {
+            this.gameState.healthCareSystem = 0.5 - Math.min(0.5 * ((newEpidemicState.infected - newEpidemicState.healthcareSystemCapacity) / newEpidemicState.healthcareSystemCapacity), 0.501)
+        }
         this.epidemicStates.push(newEpidemicState)
 
-        if (this.gameState.populationMood <= 0 || this.gameState.economy <= 0) {
+        if (this.gameState.populationMood <= 0 || this.gameState.economy <= 0 || this.gameState.healthCareSystem <= 0) {
             var lossMessage = "";
+            if (this.gameState.healthCareSystem <= 0) {
+                lossMessage = "Das Gesundheitssystem ist zusammengebrochen. Alle Hoffnung ist verloren.";
+            }
             if (this.gameState.populationMood <= 0) {
                 lossMessage = "Die Bevölkerung rebelliert und stürzt die Regierung.";
             }
@@ -102,8 +110,9 @@ export class Game {
 
 export class GameState {
 
-    private _populationMood = 0.8;
-    private _economy = 0.8;
+    private _populationMood = 1;
+    private _economy = 1;
+    private _healthCareSystem = 1;
     public currentCard: Card | undefined = undefined;
 
     constructor(
@@ -125,6 +134,14 @@ export class GameState {
 
     set economy(economy: number) {
         this._economy = clamp(economy, 0, 1);
+    }
+
+    get healthCareSystem(): number {
+        return this._healthCareSystem;
+    }
+
+    set healthCareSystem(healthCareSystem: number) {
+        this._healthCareSystem = clamp(healthCareSystem, 0, 1);
     }
 
 }
