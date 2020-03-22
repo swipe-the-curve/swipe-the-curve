@@ -1,7 +1,9 @@
 
 
 ion-content {
-  --background: url('../components/images/bg.png') -40px -20px/104% 104% no-repeat;
+  /* --background: url('../components/images/bg.png') -40px -20px/104% 104% no-repeat; */
+  --background: rgb(208,208,208);
+  --background: linear-gradient(0deg, rgb(170, 170, 170) 0%, rgba(233,226,211,1) 100%) !important;
   font-weight: 500;
   font-family: 'Verdana';
 }
@@ -77,6 +79,8 @@ ion-grid {
   border-radius: 12px;
   min-height: 7vh;
   margin: 12px;
+  margin-left: 0px;
+  margin-right: 0px;
   margin-top: 3.2vh;
   padding: 12px;
   width: 280px;
@@ -85,8 +89,16 @@ ion-grid {
   flex-direction: column;
   justify-content: center;
   cursor: pointer;
+  box-shadow: 0px 0px 4px 0.4px #000;
 }
 
+.leftChoice {
+  margin-right: 12px;
+}
+
+.rightChoice {
+  margin-left: 12px;
+}
 .shadow {
   box-shadow: none 15px;
 }
