@@ -42,6 +42,9 @@ const CardsComponent: React.FunctionComponent = () => {
                     <CardComponent card={card} />
                 </div>
             </Swipeable>
+            <div className="backgroundCard" >
+                <CardComponent card={undefined} />
+            </div>
             <div className="choices">
                 <div className="choice leftChoice" onClick={
                     () => {
