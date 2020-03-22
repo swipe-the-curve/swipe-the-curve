@@ -9,14 +9,6 @@ import { game } from '../core';
 
 
 const Home: React.FC = () => {
-
-  const cards: Array<SelectionCard> = [
-    new SelectionCard("Deutsche Touristen sind überall auf der Welt verstreut und können wegen geschlossener Grenzen nicht mehr regulär zurück reisen. Möchtest du die Bevölkerung zurück gfliefen ", new Choice("bad Choice", new ChoiceEffect(0, 0, 0, 0)), new Choice("gud Choice", new ChoiceEffect(0, 0, 0, 0))),
-    new SelectionCard("Auf der anderen Seite der Welt ist eine bisher unbekannte Krankheit aufgetreten, die sich ungewöhnlich schnell verbreitet. Möchtest du die Bevölkerung informieren?"
-      , new Choice("bad Choice", new ChoiceEffect(0, 0, 0, 0)), new Choice("gud Choice", new ChoiceEffect(0, 0, 0, 0))),
-    new EventCard("test", new Choice("Test", new ChoiceEffect(0, 0, 0, 0)))
-  ];
-
   const [heartLevel, setHeartLevel] = useState(1);
   const [feelLevel, setFeelLevel] = useState(1);
   const [wealthLevel, setWealthLevel] = useState(1);
@@ -90,7 +82,7 @@ const Home: React.FC = () => {
             </IonCol>
           </IonRow>
           <IonRow className="cardstack-container">
-            <IonCol><CardsComponent cards={cards} /></IonCol>
+            <IonCol><CardsComponent /></IonCol>
           </IonRow>
           <IonRow>
             <IonButton onClick={() => test()}>TestButton</IonButton>

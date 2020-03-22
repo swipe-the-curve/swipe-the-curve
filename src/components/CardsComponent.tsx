@@ -5,10 +5,7 @@ import CardComponent from './CardComponent';
 import { game } from '../core';
 import { IonRow, IonCol, IonButton, IonGrid } from '@ionic/react';
 
-interface CardsProps {
-    cards: Array<SelectionCard>
-}
-const CardsComponent: React.FunctionComponent<CardsProps> = (props) => {
+const CardsComponent: React.FunctionComponent = () => {
 
     const [card, setCard] = useState(new EventCard("test", new Choice("Test", new ChoiceEffect(0, 0, 0, 0))) as Card);
 
