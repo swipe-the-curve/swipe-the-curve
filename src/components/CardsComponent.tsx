@@ -3,6 +3,7 @@ import { SelectionCard, Card, EventCard, Choice, ChoiceEffect } from '../core/do
 import { Swipeable, direction } from 'react-deck-swiper';
 import CardComponent from './CardComponent';
 import { game } from '../core';
+import { IonRow, IonCol, IonButton, IonGrid } from '@ionic/react';
 
 interface CardsProps {
     cards: Array<SelectionCard>
@@ -14,7 +15,7 @@ const CardsComponent: React.FunctionComponent<CardsProps> = (props) => {
     useEffect(() => {
         console.log("addEventlistener");
         game.addStateListener(() => {
-            if(game.gameState.currentCard){
+            if (game.gameState.currentCard) {
                 setCard(game.gameState.currentCard)
             }
         });
@@ -44,6 +45,17 @@ const CardsComponent: React.FunctionComponent<CardsProps> = (props) => {
                     <CardComponent card={card} />
                 </div>
             </Swipeable>
+            <IonGrid>
+                <IonRow>
+                    <IonCol>
+                        {(card as SelectionCard).leftChoice.text}
+                    </IonCol>
+                    <IonCol>
+                        {(card as SelectionCard).rightChoice.text}
+                    </IonCol>
+                </IonRow>
+            </IonGrid>
+
         </div>
     );
 };
