@@ -6,10 +6,10 @@ import { game } from '../core';
 const Curve: React.FC = () => {
   const [epidemicState, setEpidemicState] = useState([{
     name: `Tag 0`,
-    infected: 0,
-    recovered: 0,
-    dead: 0,
-    capacity: 0
+    Infiziert: 0,
+    Genesen: 0,
+    Tot: 0,
+    Kapazität: 0
   }]);
 
   useEffect(() => {
@@ -18,10 +18,10 @@ const Curve: React.FC = () => {
       const mappedEpidemicState = game.epidemicStates.map((epidemicState, index) => {
         return {
           name: `Tag ${index + 1}`,
-          infected: epidemicState.infected,
-          recovered: epidemicState.recovered,
-          dead: epidemicState.dead,
-          capacity: epidemicState.healthcareSystemCapacity
+          Infiziert: epidemicState.infected,
+          Genesen: epidemicState.recovered,
+          Tot: epidemicState.dead,
+          Kapazität: epidemicState.healthcareSystemCapacity
         };
       })
       setEpidemicState(mappedEpidemicState);
@@ -30,8 +30,8 @@ const Curve: React.FC = () => {
 
   console.log("EpidState: ", epidemicState);
 
-  const currentCapacity = epidemicState && epidemicState.length > 0 && epidemicState[epidemicState.length - 1].capacity || 0;
-  const currentImpacted = epidemicState && epidemicState.length > 0 && epidemicState[epidemicState.length - 1].infected + epidemicState[epidemicState.length - 1].recovered + epidemicState[epidemicState.length - 1].dead || 0;
+  const currentCapacity = epidemicState && epidemicState.length > 0 && epidemicState[epidemicState.length - 1].Kapazität || 0;
+  const currentImpacted = epidemicState && epidemicState.length > 0 && epidemicState[epidemicState.length - 1].Infiziert + epidemicState[epidemicState.length - 1].Genesen + epidemicState[epidemicState.length - 1].Tot || 0;
 
   return (
     <div className="full-width full-height">
@@ -45,11 +45,11 @@ const Curve: React.FC = () => {
           >
             <Tooltip />
             <Legend verticalAlign="top" height={36}/>
-            <Area isAnimationActive={false} type="monotone" dataKey="infected" stackId="1" stroke="#f53d3d" fill="#f53d3d" />
-            <Area isAnimationActive={false} type="monotone" dataKey="recovered" stackId="1" stroke="#4db374" fill="#4db374" />
-            <Area isAnimationActive={false} type="monotone" dataKey="dead" stackId="1" stroke="#3b1111" fill="#3b1111" />
+            <Area isAnimationActive={false} type="monotone" dataKey="Infiziert" stackId="1" stroke="#f53d3d" fill="#f53d3d" />
+            <Area isAnimationActive={false} type="monotone" dataKey="Genesen" stackId="1" stroke="#4db374" fill="#4db374" />
+            <Area isAnimationActive={false} type="monotone" dataKey="Tot" stackId="1" stroke="#3b1111" fill="#3b1111" />
             {currentCapacity && (currentImpacted * 8 >= currentCapacity) && 
-              <Line isAnimationActive={false} dataKey="capacity" type="monotone" stroke="black" strokeDasharray="3 3" dot={false} />
+              <Line isAnimationActive={false} dataKey="Kapazität" type="monotone" stroke="black" strokeDasharray="3 3" dot={false} />
             }
           </ComposedChart>
         </ResponsiveContainer>
