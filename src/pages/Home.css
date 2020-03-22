@@ -107,3 +107,8 @@ ion-grid {
   width: 100%;
   z-index: -1px;
 }
+
+.full-height {
+  height: 125%;
+  margin-top: -60px;
+}
