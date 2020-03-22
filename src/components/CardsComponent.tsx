@@ -42,16 +42,25 @@ const CardsComponent: React.FunctionComponent = () => {
                     <CardComponent card={card} />
                 </div>
             </Swipeable>
-            <IonGrid>
-                <IonRow>
-                    <IonCol>
-                        {(card as SelectionCard).leftChoice.text}
-                    </IonCol>
-                    <IonCol>
-                        {(card as SelectionCard).rightChoice.text}
-                    </IonCol>
-                </IonRow>
-            </IonGrid>
+            <div className="backgroundCard" >
+                <CardComponent card={undefined} />
+            </div>
+            <div className="choices">
+                <div className="choice leftChoice" onClick={
+                    () => {
+                        handleOnSwipe(direction.LEFT);
+                    }
+                }>
+                    {(card as SelectionCard).leftChoice.text}
+                </div>
+                <div className="choice rigthChoice"onClick={
+                    () => {
+                        handleOnSwipe(direction.RIGHT);
+                    }
+                }>
+                    {(card as SelectionCard).rightChoice.text}
+                </div>
+            </div>
 
         </div>
     );
