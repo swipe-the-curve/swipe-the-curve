@@ -54,7 +54,7 @@
             "effect": {
                 "populationMood": -0.3,
                 "economy": -0.2,
-                "rateOfQuarantining": 0.3,
+                "rateOfQuarantining": 0.4,
                 "healthSystemCapacity": 0
             }
         },
@@ -220,7 +220,7 @@
             }
         },
         "rightChoice": {
-            "text": "Du wartest ab",
+            "text": "Weiter an das Volk appellieren",
             "effect": {
                 "populationMood": -0.1,
                 "economy": 0,
@@ -645,6 +645,20 @@
     },
     {
         "type": "Event",
+        "text": "Ereigniskarten",
+        "id": "Nr.",
+        "choice": {
+            "text": "Hmpf",
+            "effect": {
+                "populationMood": "Stimmung",
+                "economy": "Wirtschaft",
+                "rateOfQuarantining": "Quarantäne",
+                "healthSystemCapacity": "Gesundheitssystem"
+            }
+        }
+    },
+    {
+        "type": "Event",
         "text": "DISCLAIMER: Dies ist ein Spiel basierend auf gefährlichem Halbwissen und keinesfalls eine realistische Simulation der aktuellen Situation und vergangener oder zukünftiger Entscheidungen.",
         "id": "E0",
         "choice": {
@@ -673,7 +687,7 @@
     },
     {
         "type": "Event",
-        "text": "Im Landkreis Heinsbach findet eine Party statt. Die Gäste infizieren sich untereinander.",
+        "text": "In einer Kleinstadt, von der vorher noch niemand gehört hat, findet eine Party statt. Die Gäste infizieren sich untereinander.",
         "id": "E2",
         "choice": {
             "text": "Es wird versucht, die Infektionsketten nachzuvollziehen",
@@ -957,20 +971,6 @@
         "id": "E22",
         "choice": {
             "text": "Testphase vorbereiten",
-            "effect": {
-                "populationMood": 0.5,
-                "economy": 0.1,
-                "rateOfQuarantining": 0.7,
-                "healthSystemCapacity": 0
-            }
-        }
-    },
-    {
-        "type": "Event",
-        "text": "Eine Therapie ist entwickelt und schlägt bei 80%.",
-        "id": "E23",
-        "choice": {
-            "text": "Therapie einsetzen",
             "effect": {
                 "populationMood": 0.5,
                 "economy": 0.1,
