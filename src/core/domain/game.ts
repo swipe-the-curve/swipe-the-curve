@@ -3,10 +3,10 @@ import { Disease, Country } from "./common";
 import { ChoiceEffect, Card, createGameLostEvent, createGameWonEvent } from "./card";
 import CardReader from "../reader/cardReader";
 
-const story: string[] = ["E0", "A1", "E1", "A31", "E21", "A17", "A33", "?E", "A32", "A26", "A9", "E33", "?E", "A21", "A24", "A25", "?E", "A19"]
+const story: string[] = ["E0", "A1", "E1", "A31", "E21", "A17", "A33", "?E", "A32", "A26", "A9", "E33", "?E", "A21", "A24", "A25", "?E", "A19", "A7", "?M", "A22", "?M", "A3", "?M", "A14", "?M", "A6", "?M", "A2"]
 
 const randomEarly: string[] = ["E2", "E16", "E21", "E33", "E34", "E35", "E36"]
-const randomMid: string[] = ["E2", "E16", "E21", "E33", "E34", "E35", "E36"]
+const randomMid: string[] = ["E3", "E8", "E9", "E10", "E13", "E14", "E17", "E18", "E19"]
 const randomLate: string[] = ["E2", "E16", "E21", "E33", "E34", "E35", "E36"]
 
 export class Game {
