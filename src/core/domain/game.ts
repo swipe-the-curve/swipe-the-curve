@@ -5,12 +5,15 @@ import CardReader from "../reader/cardReader";
 
 export class Game {
 
+    readonly forecastSteps = 15;
+    infectedForecasts: number[] = []
+
     readonly epidemicStates: EpidemicState[]
     readonly model : EpidemicModel
     readonly gameState : GameState
     cards: Card[] = []
 
-    readonly stateListeners: StateListener[];
+    private readonly stateListeners: StateListener[];
 
     constructor() {
         var disease = new Disease("Corona", 2.3, 0.005, 0)
@@ -46,6 +49,16 @@ export class Game {
         )
         newEpidemicState.healthcareSystemCapacity = this.gameState.infectionState.healthcareSystemCapacity  * this.gameState.country.population
         this.epidemicStates.push(newEpidemicState)
+
+        this.infectedForecasts = [];
+        for(var i = 0; i < this.forecastSteps; i++) {
+            newEpidemicState = this.model.step(
+                this.gameState.infectionState.rateOfInfection / this.gameState.country.population,
+                this.gameState.infectionState.rateOfDeath(this.epidemicStates[this.epidemicStates.length - 1]),
+                this.gameState.infectionState.rateOfImmunity
+            )
+            this.infectedForecasts.push(newEpidemicState.infected)
+        }
 
         if (this.gameState.populationMood <= 0 || this.gameState.economy <= 0) {
             var lossMessage = "";

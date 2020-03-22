@@ -3,19 +3,22 @@ import React, { useState, useEffect } from 'react';
 import { ResponsiveContainer, Area, Tooltip, ComposedChart, Line} from 'recharts';
 import { game } from '../core';
 
+interface DataPoint {
+  name: string;
+  infected?: number;
+  recovered?: number;
+  dead?: number;
+  capacity?: number;
+  forecast?: number;
+}
+
 const Curve: React.FC = () => {
-  const [epidemicState, setEpidemicState] = useState([{
-    name: `Tag 0`,
-    infected: 0,
-    recovered: 0,
-    dead: 0,
-    capacity: 0
-  }]);
+  const [epidemicState, setEpidemicState] = useState<DataPoint[]>([]);
 
   useEffect(() => {
     console.log("addEventlistener");
     game.addStateListener(() => {
-      const mappedEpidemicState = game.epidemicStates.map((epidemicState, index) => {
+      const mappedEpidemicState: DataPoint[] = game.epidemicStates.map((epidemicState, index) => {
         return {
           name: `Tag ${index + 1}`,
           infected: epidemicState.infected,
@@ -24,6 +27,16 @@ const Curve: React.FC = () => {
           capacity: epidemicState.healthcareSystemCapacity
         };
       })
+      mappedEpidemicState[mappedEpidemicState.length - 1]["forecast"] = mappedEpidemicState[mappedEpidemicState.length - 1].infected;
+
+      var day = mappedEpidemicState.length;
+      for (const forecast of game.infectedForecasts) {
+        mappedEpidemicState.push({
+          name: `Tag ${day + 1}`,
+          forecast: forecast
+        })
+      }
+
       setEpidemicState(mappedEpidemicState);
     });
   }, [])
@@ -44,6 +57,7 @@ const Curve: React.FC = () => {
             <Area isAnimationActive={false} type="monotone" dataKey="recovered" stackId="1" stroke="#4db374" fill="#4db374" />
             <Area isAnimationActive={false} type="monotone" dataKey="dead" stackId="1" stroke="#3b1111" fill="#3b1111" />
             <Line isAnimationActive={false} type="monotone" dataKey="capacity" stroke="#000000" strokeDasharray="3" dot={false}/>
+            <Line isAnimationActive={false} type="monotone" dataKey="forecast" stroke="#00ff00" strokeWidth="5" dot={false}/>
           </ComposedChart>
         </ResponsiveContainer>
     </div>
