@@ -22,14 +22,14 @@ const CardsComponent: React.FunctionComponent = () => {
     const handleOnSwipe = (swipeDirection: direction) => {
         if (swipeDirection === direction.RIGHT) {
             if (card instanceof SelectionCard) {
-                game.step((card as EventCard).leftChoice.effect)
+                game.step((card as EventCard).rightChoice.effect)
             }
             return
         }
 
         if (swipeDirection === direction.LEFT) {
             if (card instanceof SelectionCard) {
-                game.step((card as EventCard).rightChoice.effect)
+                game.step((card as EventCard).leftChoice.effect)
             }
             return;
         }
@@ -53,7 +53,7 @@ const CardsComponent: React.FunctionComponent = () => {
                 }>
                     {(card as SelectionCard).leftChoice.text}
                 </div>
-                <div className="choice rigthChoice"onClick={
+                <div className="choice rightChoice"onClick={
                     () => {
                         handleOnSwipe(direction.RIGHT);
                     }

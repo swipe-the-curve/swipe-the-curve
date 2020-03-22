@@ -36,7 +36,7 @@ export class Game {
     public step(effect: ChoiceEffect) {
         this.gameState.populationMood += effect.populationMood
         this.gameState.economy += effect.economy
-        this.gameState.infectionState.healthcareSystemCapacity += effect.healthSystemCapacity
+        this.gameState.infectionState.healthcareSystemCapacity *= 1 + effect.healthSystemCapacity
         this.gameState.infectionState.rateOfQuarantining += effect.rateOfQuarantining
 
         var newEpidemicState = this.model.step(
