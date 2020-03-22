@@ -3,13 +3,12 @@ import { Disease, Country } from "./common";
 import { ChoiceEffect, Card, createGameLostEvent, createGameWonEvent } from "./card";
 import CardReader from "../reader/cardReader";
 
-const story: string[] = ["E0", "A1", "E1", "E16", "A3", "A7", "A2", "A8", "E14", "A10", "E9", "A5"]
-
+const story: string[] = ["E0", "A1", "E1", "A31", "E34", "A33", "E2", "A32", "A26", "E16", "A9", "E33", "A7", "A22", "A3", "A5", "A6", "A10", "A8", "E9"]
 export class Game {
 
     readonly epidemicStates: EpidemicState[]
-    readonly model : EpidemicModel
-    readonly gameState : GameState
+    readonly model: EpidemicModel
+    readonly gameState: GameState
     cards: Card[] = []
 
     readonly stateListeners: StateListener[];
@@ -32,14 +31,14 @@ export class Game {
 
     private initializeCards() {
         fetch(process.env.PUBLIC_URL + "/assets/cards/default.json")
-        .then(r => r.json())
-        .then(d => {
-            const cardsById: {[id: string]: Card} = {};
-            new CardReader().fromObject(d).forEach(c => cardsById[c.id] = c)
-            this.cards = story.reverse().map(id => cardsById[id]);
-            this.gameState.currentCard = this.nextCard();
-            this.notifyListeners();
-        });
+            .then(r => r.json())
+            .then(d => {
+                const cardsById: { [id: string]: Card } = {};
+                new CardReader().fromObject(d).forEach(c => cardsById[c.id] = c)
+                this.cards = story.reverse().map(id => cardsById[id]);
+                this.gameState.currentCard = this.nextCard();
+                this.notifyListeners();
+            });
     }
 
     public step(effect: ChoiceEffect) {
@@ -53,7 +52,7 @@ export class Game {
             this.gameState.infectionState.rateOfDeath(this.epidemicStates[this.epidemicStates.length - 1]),
             this.gameState.infectionState.rateOfImmunity
         )
-        newEpidemicState.healthcareSystemCapacity = Math.floor(this.gameState.infectionState.healthcareSystemCapacity  * this.gameState.country.population)
+        newEpidemicState.healthcareSystemCapacity = Math.floor(this.gameState.infectionState.healthcareSystemCapacity * this.gameState.country.population)
         if (newEpidemicState.infected < newEpidemicState.healthcareSystemCapacity) {
             this.gameState.healthCareSystem = 1 - 0.5 * (newEpidemicState.infected / newEpidemicState.healthcareSystemCapacity)
         } else {
@@ -159,7 +158,7 @@ export class InfectionState {
         this._healthcareSystemCapacity = healthcareSystemCapacity;
     }
 
-    public get rateOfQuarantining() : number {
+    public get rateOfQuarantining(): number {
         return this._rateOfQuarantining
     }
 
@@ -167,7 +166,7 @@ export class InfectionState {
         this._rateOfQuarantining = clamp(rateOfQuarantining, 0, 1);
     }
 
-    public get healthcareSystemCapacity() : number {
+    public get healthcareSystemCapacity(): number {
         return this._healthcareSystemCapacity
     }
 
@@ -184,13 +183,13 @@ export class InfectionState {
         return Math.min(this.disease.rateOfDeath * rateOfDeathFactor, 1);
     }
 
-    public get rateOfInfection() : number {
+    public get rateOfInfection(): number {
         // TODO Additional factors 
         const quarantineFactor = 1 - this.rateOfQuarantining;
         return this.disease.rateOfInfection * quarantineFactor;
     }
 
-    public get rateOfImmunity() : number {
+    public get rateOfImmunity(): number {
         return this.disease.rateOfImmunity
     }
 
