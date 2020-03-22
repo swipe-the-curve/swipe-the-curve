@@ -3,6 +3,8 @@ import { Disease, Country } from "./common";
 import { ChoiceEffect, Card, createGameLostEvent, createGameWonEvent } from "./card";
 import CardReader from "../reader/cardReader";
 
+const story: string[] = ["E0", "A1", "E1", "E16", "A3", "A7", "A2", "A8", "E14", "A10", "E9", "A5"]
+
 export class Game {
 
     readonly epidemicStates: EpidemicState[]
@@ -15,13 +17,6 @@ export class Game {
     constructor() {
         var disease = new Disease("Corona", 2.3, 0.005, 0)
         var country = new Country("SCHLAND", 80000000)
-        fetch(process.env.PUBLIC_URL + "/assets/cards/default.json")
-        .then(r => r.json())
-        .then(d => {
-            this.cards = new CardReader().fromObject(d).reverse();
-            this.gameState.currentCard = this.nextCard();
-            this.notifyListeners();
-        });
         const infectionState = new InfectionState(country, disease, 0.0004)
         this.gameState = new GameState(infectionState, country)
         this.model = new EpidemicModel(0, country.population)
@@ -31,6 +26,20 @@ export class Game {
         initialEpidemicState.healthcareSystemCapacity = Math.floor(infectionState.healthcareSystemCapacity * country.population)
         this.epidemicStates = [initialEpidemicState]
         this.stateListeners = []
+
+        this.initializeCards();
+    }
+
+    private initializeCards() {
+        fetch(process.env.PUBLIC_URL + "/assets/cards/default.json")
+        .then(r => r.json())
+        .then(d => {
+            const cardsById: {[id: string]: Card} = {};
+            new CardReader().fromObject(d).forEach(c => cardsById[c.id] = c)
+            this.cards = story.reverse().map(id => cardsById[id]);
+            this.gameState.currentCard = this.nextCard();
+            this.notifyListeners();
+        });
     }
 
     public step(effect: ChoiceEffect) {
