@@ -44,8 +44,9 @@ ion-grid {
 .card {
   background-color: #EDE7D9;
   border-radius: 12px;
-  height: 29vh;
+  height: 27.5vh;
   margin: 16px;
+  margin-top: -1vh;
   padding: 10%;
   color: black;
   font-size: 26px;
@@ -54,11 +55,16 @@ ion-grid {
   justify-content: center;
   line-height: 30px;
   user-select: none;
+  box-shadow: 0px 0px 7px 0.4px #000;
 }
 
 .card:hover {
   text-decoration-style: none;
   cursor: pointer;
+}
+
+.backgroundCard {
+  margin-top: -26vh;
 }
 
 .choices {
@@ -71,7 +77,7 @@ ion-grid {
   border-radius: 12px;
   min-height: 7vh;
   margin: 12px;
-  margin-top: 2.5vh;
+  margin-top: 3.2vh;
   padding: 12px;
   width: 280px;
   color: black;
@@ -81,8 +87,8 @@ ion-grid {
   cursor: pointer;
 }
 
-.border {
-  border: solid 1px blue;
+.shadow {
+  box-shadow: none 15px;
 }
 
 .full-width {
