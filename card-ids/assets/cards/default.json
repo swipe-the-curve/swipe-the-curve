@@ -52,7 +52,7 @@
         "leftChoice": {
             "text": "Eine Ausgangssperre in Kraft setzten.",
             "effect": {
-                "populationMood": -0.1,
+                "populationMood": -0.3,
                 "economy": 0,
                 "rateOfQuarantining": 0.3,
                 "healthSystemCapacity": 0
@@ -645,10 +645,10 @@
     },
     {
         "type": "Event",
-        "text": "E0",
+        "text": "DISCLAIMER: Das ist ein Spiel basierend auf gefährlichem Halbwissen und keinesfalls eine realistische Simulation der aktuellen Situation und vergangener oder zukünftiger Entscheidungen.",
         "id": "E0",
         "choice": {
-            "text": "Hmpf",
+            "text": "Ich verstehe",
             "effect": {
                 "populationMood": 0,
                 "economy": 0,
@@ -659,7 +659,7 @@
     },
     {
         "type": "Event",
-        "text": "E1",
+        "text": "Der erste Fall von <Virus> ist in <Land> aufgetreten.",
         "id": "E1",
         "choice": {
             "text": "Hmpf",
@@ -673,7 +673,7 @@
     },
     {
         "type": "Event",
-        "text": "E2",
+        "text": "Im Landkreis Heinsberg findet eine Party statt. Die Gäste infizieren sich untereinander.",
         "id": "E2",
         "choice": {
             "text": "Hmpf",
@@ -687,7 +687,7 @@
     },
     {
         "type": "Event",
-        "text": "E3",
+        "text": "Bilder aus Bürgerkriegsregionen in Afrika verbreiten sich.",
         "id": "E3",
         "choice": {
             "text": "Hmpf",
@@ -701,7 +701,7 @@
     },
     {
         "type": "Event",
-        "text": "E4",
+        "text": "Ein vermeintlich vielversprechender Impfstoff ist doch wirkungslos.",
         "id": "E4",
         "choice": {
             "text": "Hmpf",
@@ -715,7 +715,7 @@
     },
     {
         "type": "Event",
-        "text": "E5",
+        "text": "Die Reichsbürgerbewegung versucht zu putschen.",
         "id": "E5",
         "choice": {
             "text": "Hmpf",
@@ -729,7 +729,7 @@
     },
     {
         "type": "Event",
-        "text": "E6",
+        "text": "Erste Corona-Überlebende melden sich, um in Schlüsselpositionen zu arbeiten.",
         "id": "E6",
         "choice": {
             "text": "Hmpf",
@@ -743,7 +743,7 @@
     },
     {
         "type": "Event",
-        "text": "E7",
+        "text": "Die Kurse an der Börse brechen ein, die private Altersvorsorge von Millionen Deutschen ist vernichtet.",
         "id": "E7",
         "choice": {
             "text": "Hmpf",
@@ -757,7 +757,7 @@
     },
     {
         "type": "Event",
-        "text": "E8",
+        "text": "Künstler veranstalten Streaming-Konzerte.",
         "id": "E8",
         "choice": {
             "text": "Hmpf",
@@ -771,7 +771,7 @@
     },
     {
         "type": "Event",
-        "text": "E9",
+        "text": "Nach einem Hackathon kann Hilfe unter Bürgern besser koordiniert werden.",
         "id": "E9",
         "choice": {
             "text": "Hmpf",
@@ -785,7 +785,7 @@
     },
     {
         "type": "Event",
-        "text": "E10",
+        "text": "Die Banken vergeben keine Kredite mehr.",
         "id": "E10",
         "choice": {
             "text": "Hmpf",
@@ -799,7 +799,7 @@
     },
     {
         "type": "Event",
-        "text": "E11",
+        "text": "Bankrun",
         "id": "E11",
         "choice": {
             "text": "Hmpf",
@@ -813,7 +813,7 @@
     },
     {
         "type": "Event",
-        "text": "E12",
+        "text": "Der Vorrat an Sicherheitskleidung geht zuneige. Einzelne Ärzte infizieren sich und fallen aus.",
         "id": "E12",
         "choice": {
             "text": "Hmpf",
@@ -827,7 +827,7 @@
     },
     {
         "type": "Event",
-        "text": "E13",
+        "text": "Ärzte entwickeln Immunität.",
         "id": "E13",
         "choice": {
             "text": "Hmpf",
@@ -841,7 +841,7 @@
     },
     {
         "type": "Event",
-        "text": "E14",
+        "text": "Gutes Wetter und mehr Freizeit durch Corona-Urlaub und Freistellungen führen zu mehr Menschen in Innenstädten und Parks.",
         "id": "E14",
         "choice": {
             "text": "Hmpf",
