@@ -234,7 +234,7 @@
         "text": "Obwohl das Missachten der Ausgangssperren mit Geldstrafen geandet wird (500€ pro Verstoß), wird sie von einigen Bürgern weiter missachtet.",
         "id": "A11",
         "leftChoice": {
-            "text": "Geldstrafe auf 1.000€ erhöhen",
+            "text": "Geldstrafe auf 25.000€ erhöhen",
             "effect": {
                 "populationMood": -0.05,
                 "economy": 0,
@@ -714,6 +714,34 @@
     },
     {
         "type": "Event",
+        "text": "DISCLAIMER: Dies ist ein Spiel basierend auf gefährlichem Halbwissen und keinesfalls eine realistische Simulation der aktuellen Situation und vergangener oder zukünftiger Entscheidungen.",
+        "id": "E0",
+        "choice": {
+            "text": "Ich verstehe",
+            "effect": {
+                "populationMood": 0,
+                "economy": 0,
+                "rateOfQuarantining": 0,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Event",
+        "text": "Der erste Fall des Coronavirus ist in Deutschland aufgetreten.",
+        "id": "E1",
+        "choice": {
+            "text": "Zum Glück bisher nur einer",
+            "effect": {
+                "populationMood": 0,
+                "economy": 0,
+                "rateOfQuarantining": -0.01,
+                "healthSystemCapacity": 0
+            }
+        }
+    },
+    {
+        "type": "Event",
         "text": "In einer Kleinstadt, von der vorher noch niemand gehört hat, findet eine Party statt. Die Gäste infizieren sich untereinander.",
         "id": "E2",
         "choice": {
@@ -885,7 +913,7 @@
         "text": "Gutes Wetter und mehr Freizeit durch Corona-Urlaub und Freistellungen führen zu mehr Menschen in Innenstädten und Parks.",
         "id": "E14",
         "choice": {
-            "text": "Hmpf",
+            "text": "Nochmal ein Eis genießen",
             "effect": {
                 "populationMood": 0.1,
                 "economy": 0.1,
