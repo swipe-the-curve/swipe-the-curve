@@ -2,6 +2,8 @@
 
 ion-content {
   --background: url('../components/images/bg.png') -40px -20px/104% 104% no-repeat;
+  font-weight: 500;
+  font-family: 'Verdana';
 }
 
 ion-content ion-toolbar {
@@ -44,13 +46,39 @@ ion-grid {
   border-radius: 12px;
   height: 29vh;
   margin: 16px;
-  padding: 8px;
+  padding: 10%;
   color: black;
-  font-size: 2em;
-  text-align: center;
+  font-size: 26px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  line-height: 30px;
+  user-select: none;
+}
+
+.card:hover {
+  text-decoration-style: none;
+  cursor: pointer;
+}
+
+.choices {
+  display: flex;
+  font-weight: 700;
+}
+
+.choice {
+  background-color: #D5A021;
+  border-radius: 12px;
+  min-height: 7vh;
+  margin: 12px;
+  margin-top: 2.5vh;
+  padding: 12px;
+  width: 280px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .border {
