@@ -64,7 +64,7 @@ export class Game {
         if (this.gameState.populationMood <= 0 || this.gameState.economy <= 0 || this.gameState.healthCareSystem <= 0) {
             var lossMessage = "";
             if (this.gameState.healthCareSystem <= 0) {
-                lossMessage = "Das Gesundheitssystem ist zusammengebrochen. Alle Hoffnung ist verloren.";
+                lossMessage = "Das Gesundheitssystem ist zusammengebrochen. Der Virus ist außer Kontrolle und wir müssen mit vielen Toten rechnen.";
             }
             if (this.gameState.populationMood <= 0) {
                 lossMessage = "Die Bevölkerung rebelliert und stürzt die Regierung.";
