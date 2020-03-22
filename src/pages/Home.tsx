@@ -35,8 +35,8 @@ const Home: React.FC = () => {
                 <title>Heart</title>
                 <defs>
                   <linearGradient id="progressHeart" x1="0" y1="1" x2="0" y2="0">
-                    <stop id="stop1Heart" offset={heartLevel} stop-color="red" />
-                    <stop id="stop2Heart" offset={heartLevel} stop-color="black" />
+                    <stop id="stop1Heart" offset={heartLevel} stopColor="red" />
+                    <stop id="stop2Heart" offset={heartLevel} stopColor="black" />
                   </linearGradient>
                 </defs>
                 <path
@@ -51,8 +51,8 @@ const Home: React.FC = () => {
                 <title>People</title>
                 <defs>
                   <linearGradient id="progressPeople" x1="0" y1="1" x2="0" y2="0">
-                    <stop id="stop1People" offset={feelLevel} stop-color="lightblue" />
-                    <stop id="stop2People" offset={feelLevel} stop-color="black" />
+                    <stop id="stop1People" offset={feelLevel} stopColor="lightblue" />
+                    <stop id="stop2People" offset={feelLevel} stopColor="black" />
                   </linearGradient>
                 </defs>
                 <path
@@ -66,8 +66,8 @@ const Home: React.FC = () => {
                 <title>Wealth</title>
                 <defs>
                   <linearGradient id="progressWealth" x1="0" y1="1" x2="0" y2="0">
-                    <stop id="stop1Wealth" offset={wealthLevel} stop-color="#D5A021" />
-                    <stop id="stop2Wealth" offset={wealthLevel} stop-color="black" />
+                    <stop id="stop1Wealth" offset={wealthLevel} stopColor="#D5A021" />
+                    <stop id="stop2Wealth" offset={wealthLevel} stopColor="black" />
                   </linearGradient>
                 </defs>
                 <path
@@ -81,9 +81,6 @@ const Home: React.FC = () => {
           <IonRow className="cardstack-container">
             <IonCol><CardsComponent /></IonCol>
           </IonRow>
-          {/* <IonRow>
-            <IonButton onClick={() => test()}>TestButton</IonButton>
-          </IonRow> */}
         </IonGrid>
       </IonContent>
     </IonPage>
