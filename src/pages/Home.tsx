@@ -84,9 +84,9 @@ const Home: React.FC = () => {
           <IonRow className="cardstack-container">
             <IonCol><CardsComponent /></IonCol>
           </IonRow>
-          <IonRow>
+          {/* <IonRow>
             <IonButton onClick={() => test()}>TestButton</IonButton>
-          </IonRow>
+          </IonRow> */}
         </IonGrid>
       </IonContent>
     </IonPage>
