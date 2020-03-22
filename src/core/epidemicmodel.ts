@@ -24,6 +24,13 @@ export class EpidemicModel {
         this.dead = this.dead + newDead
         return new EpidemicState(this.recovered, this.infected, this.dead)
     }
+
+    copy(): EpidemicModel {
+        const instance = new EpidemicModel(this.infected, this.susceptibles);
+        instance.recovered = this.recovered;
+        instance.dead = this.dead;
+        return instance;
+    }
 }
 
 export class EpidemicState {

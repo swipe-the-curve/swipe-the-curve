@@ -1,6 +1,6 @@
 import { } from '@ionic/react';
 import React, { useState, useEffect } from 'react';
-import { ResponsiveContainer, Area, Tooltip, ComposedChart, ReferenceLine} from 'recharts';
+import { ResponsiveContainer, Area, Tooltip, ComposedChart, ReferenceLine, Line} from 'recharts';
 import { game } from '../core';
 
 interface DataPoint {
@@ -63,7 +63,7 @@ const Curve: React.FC = () => {
             {currentCapacity && (currentInfected * 8 >= currentCapacity) && 
               <ReferenceLine y={currentCapacity} label='Healthcare capacity' stroke="black" strokeDasharray="3 3" alwaysShow/>
             }
-            <Line isAnimationActive={false} type="monotone" dataKey="forecast" stroke="#00ff00" strokeWidth="5" dot={false}/>
+            <Line isAnimationActive={false} type="monotone" dataKey="forecast" stroke="#f53d3d" dot={false}/>
           </ComposedChart>
         </ResponsiveContainer>
     </div>

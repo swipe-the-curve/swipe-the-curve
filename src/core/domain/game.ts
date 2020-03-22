@@ -5,7 +5,7 @@ import CardReader from "../reader/cardReader";
 
 export class Game {
 
-    readonly forecastSteps = 15;
+    readonly forecastSteps = 5;
     infectedForecasts: number[] = []
 
     readonly epidemicStates: EpidemicState[]
@@ -50,14 +50,16 @@ export class Game {
         newEpidemicState.healthcareSystemCapacity = Math.floor(this.gameState.infectionState.healthcareSystemCapacity  * this.gameState.country.population)
         this.epidemicStates.push(newEpidemicState)
 
+        const forecastModel = this.model.copy();
+        var forecastState = this.epidemicStates[this.epidemicStates.length - 1];
         this.infectedForecasts = [];
         for(var i = 0; i < this.forecastSteps; i++) {
-            newEpidemicState = this.model.step(
+            forecastState = forecastModel.step(
                 this.gameState.infectionState.rateOfInfection / this.gameState.country.population,
-                this.gameState.infectionState.rateOfDeath(this.epidemicStates[this.epidemicStates.length - 1]),
+                this.gameState.infectionState.rateOfDeath(forecastState),
                 this.gameState.infectionState.rateOfImmunity
             )
-            this.infectedForecasts.push(newEpidemicState.infected)
+            this.infectedForecasts.push(forecastState.infected)
         }
 
         if (this.gameState.populationMood <= 0 || this.gameState.economy <= 0) {
