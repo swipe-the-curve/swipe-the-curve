@@ -6,6 +6,14 @@ import CardsComponent from '../components/CardsComponent';
 import { EventCard, Choice, ChoiceEffect, SelectionCard } from '../core/domain/card';
 import { game } from '../core';
 
+const isSafari = navigator.userAgent.toLowerCase().indexOf('safari') > -1;
+function getSvgHeightSetting() {
+  if (isSafari) {
+    return '3vh'
+  }
+  return '20%'
+}
+
 
 
 const Home: React.FC = () => {
@@ -31,7 +39,7 @@ const Home: React.FC = () => {
           </IonRow>
           <IonRow className="resource-container">
             <IonCol>
-              <svg xmlns='http://www.w3.org/2000/svg' height='20%' viewBox='0 0 24 24'>
+              <svg xmlns='http://www.w3.org/2000/svg' height={getSvgHeightSetting()} viewBox='0 0 24 24'>
                 <title>Health</title>
                 <defs>
                   <linearGradient id="progressHeart" x1="0" y1="1" x2="0" y2="0">
@@ -47,7 +55,7 @@ const Home: React.FC = () => {
               </svg>
             </IonCol>
             <IonCol>
-              <svg xmlns='http://www.w3.org/2000/svg' height='20%' viewBox='0 0 512 512'>
+              <svg xmlns='http://www.w3.org/2000/svg' height={getSvgHeightSetting()} viewBox='0 0 512 512'>
                 <title>Mood</title>
                 <defs>
                   <linearGradient id="progressPeople" x1="0" y1="1" x2="0" y2="0">
@@ -62,7 +70,7 @@ const Home: React.FC = () => {
               </svg>
             </IonCol>
             <IonCol>
-              <svg xmlns='http://www.w3.org/2000/svg' height='20%' viewBox='0 0 512 512'>
+              <svg xmlns='http://www.w3.org/2000/svg' height={getSvgHeightSetting()} viewBox='0 0 512 512'>
                 <title>Wealth</title>
                 <defs>
                   <linearGradient id="progressWealth" x1="0" y1="1" x2="0" y2="0">
