@@ -48,7 +48,7 @@
   },
   "description": "An Ionic project",
   "devDependencies": {
-    "react-scripts": "3.4.0"
+    "react-scripts": "5.0.1"
   },
   "resolutions": {
     "@babel/preset-env": "7.5.5"
